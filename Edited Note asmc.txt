@@ -2,11 +2,3 @@ Edited Note ASMC
 
 Aug 1, 2016
 1. add angularjs file
-
-Database field changes
-In forms table form_date change to date
-
-
-
-Needed Unexpectly
-1. check form_date insert in sign up forms page

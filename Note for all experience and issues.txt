@@ -672,26 +672,21 @@ issue(31)({
 	Tag 1: angular code to show date with format
 	https://docs.angularjs.org/api/ng/filter/date
 	
-	<span ng-non-bindable>{{1288323623006 | date:'medium'}}</span>:
-		<span>{{1288323623006 | date:'medium'}}</span><br>
-	<span ng-non-bindable>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span>:
-	   <span>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span><br>
-	<span ng-non-bindable>{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}</span>:
-	   <span>{{'1288323623006' | date:'MM/dd/yyyy @ h:mma'}}</span><br>
-	<span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:
-	   <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span><br>
-
-	   Output
-	   
-	{{1288323623006 | date:'medium'}}: Oct 29, 2010 10:10:23 AM
-	{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}: 2010-10-29 10:10:23 +0630
-	{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}: 10/29/2010 @ 10:10AM
-	{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}: 10/29/2010 at 10:10AM
-});
-
-issue(32)({
-	angular js show currency format 
-	https://docs.angularjs.org/api/ng/filter/currency
 	
-	default currency symbol ($): <span id="currency-default">{{amount | currency}}</span><br>
+
+<span ng-non-bindable>{{1288323623006 | date:'medium'}}</span>:
+    <span>{{1288323623006 | date:'medium'}}</span><br>
+<span ng-non-bindable>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span>:
+   <span>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span><br>
+<span ng-non-bindable>{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}</span>:
+   <span>{{'1288323623006' | date:'MM/dd/yyyy @ h:mma'}}</span><br>
+<span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:
+   <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span><br>
+
+   Output
+   
+{{1288323623006 | date:'medium'}}: Oct 29, 2010 10:10:23 AM
+{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}: 2010-10-29 10:10:23 +0630
+{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}: 10/29/2010 @ 10:10AM
+{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}: 10/29/2010 at 10:10AM
 });

@@ -150,7 +150,7 @@ class Form extends CI_Controller {
 		
 		$data['active'] = 'online';
 		
-		$per_page = 10000;
+		$per_page = 30;
 		$data['per_page'] = $per_page;
 		
 		$limit = $per_page;

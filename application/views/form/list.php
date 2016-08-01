@@ -44,22 +44,9 @@ function confirmDelete() {
               }
               ?>
               
-              	 <!--<form method="get" action="<?php //echo base_url();?>form/viewRecords">
+              	 <form method="get" action="<?php echo base_url();?>form/viewRecords">
               		Search: <input type="text" name="search" />
               		<input type="submit" class="btn btn-primary" value="Search" name="submit"/>
-              	</form>-->
-				<form method="get" action="<?php echo base_url();?>form/viewRecords">
-              		Search: <input type="text" name="search" ng-model="search" ng-change="filter()" placeholder="Filter" />
-					<select ng-model="entryLimit" class="sel_entryLimit">
-						<option ng-selected="true">20</option>
-						<option>30</option>
-						<option>50</option>
-						<option>100</option>
-						<option>200</option>
-						<option>300</option>
-						<option>500</option>
-					</select>
-              		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
              
               	<br/>
@@ -67,68 +54,53 @@ function confirmDelete() {
              	<table class="table table-bordered">
 					<thead>
 					<tr>
-						<th ng-click="sortField = 'booking_ref_no'; reverse = !reverse"><a href="">Booking Ref No.</th>
-						<th ng-click="sortField = 'form_date'; reverse = !reverse"><a href="">Date</th>
-						<th ng-click="sortField = 'name'; reverse = !reverse"><a href="">Name</th>
-						<th ng-click="sortField = 'nric'; reverse = !reverse"><a href="">NRIC</th>
-						<th ng-click="sortField = 'mobile'; reverse = !reverse"><a href="">Mobile</th>
-						<th ng-click="sortField = 'funding_amt'; reverse = !reverse"><a href="">Funding Amt.</th>
-						<th ng-click="sortField = 'inv_status'; reverse = !reverse"><a href="">Status</th>
+						<th>Booking Ref No.</th>
+						<th>Date</th>
+						<th>Name</th>
+						<th>NRIC</th>
+						<th>Mobile</th>
+						<th>Funding Amt.</th>
+						<th>Status</th>
 <!-- 						<th>Created Date</th> -->
 						<th>Action</th>
 					</tr>
 					</thead>
-					<tbody ng-init="getdatas(<?php echo htmlspecialchars(json_encode($forms,JSON_NUMERIC_CHECK)); ?>)">
+					<tbody>
 					
 					<?php
-					// if (isset($forms) && count($forms) > 0) {
+					if (isset($forms) && count($forms) > 0) {
 						
-						// for ($i = 0; $i < count($forms); $i++) {
-							// echo '<tr>';
+						for ($i = 0; $i < count($forms); $i++) {
+							echo '<tr>';
 							
-							// echo '<td>'.$forms[$i]->{'booking_ref_no'}.'</td>';
-							// echo '<td>'.date('d-M-Y', strtotime($forms[$i]->{'form_date'})).'</td>';
-							// echo '<td>'.$forms[$i]->{'name'}.'</td>';
-							// echo '<td>'.$forms[$i]->{'nric'}.'</td>';
-							// echo '<td>'.$forms[$i]->{'mobile'}.'</td>';
-							// echo '<td>'.$forms[$i]->{'funding_amt'}.'</td>';
+							echo '<td>'.$forms[$i]->{'booking_ref_no'}.'</td>';
+							echo '<td>'.date('d-M-Y', strtotime($forms[$i]->{'form_date'})).'</td>';
+							echo '<td>'.$forms[$i]->{'name'}.'</td>';
+							echo '<td>'.$forms[$i]->{'nric'}.'</td>';
+							echo '<td>'.$forms[$i]->{'mobile'}.'</td>';
+							echo '<td>'.$forms[$i]->{'funding_amt'}.'</td>';
 							
-// // 							echo '<td>'.date('Y-m-d', strtotime($forms[$i]->{'form_created_date'})).'</td>';
-							// echo '<td>';
-							// $inv = $this->Invoice_model->getInvoiceForForm($forms[$i]->{'f_id'});
+// 							echo '<td>'.date('Y-m-d', strtotime($forms[$i]->{'form_created_date'})).'</td>';
+							echo '<td>';
+							$inv = $this->Invoice_model->getInvoiceForForm($forms[$i]->{'f_id'});
 							
-							// if (count($inv) == 0) {
-								// echo '<span class="label label-warning">Pending</span>';
-							// }
-							// else {
-								// echo '<span class="label label-success">Approved</span>';
-							// }
-							// echo '</td>';
-							// echo '<td><a href="'.base_url().'invoice/addFromForm/?id='.$forms[$i]->{'f_id'}.'">Edit</a> | 
-								// <a href="'.base_url().'form/deleteRecord/?id='.$forms[$i]->{'f_id'}.'" onClick="return confirmDelete();">Delete</a>';
+							if (count($inv) == 0) {
+								echo '<span class="label label-warning">Pending</span>';
+							}
+							else {
+								echo '<span class="label label-success">Approved</span>';
+							}
+							echo '</td>';
+							echo '<td><a href="'.base_url().'invoice/addFromForm/?id='.$forms[$i]->{'f_id'}.'">Edit</a> | 
+								<a href="'.base_url().'form/deleteRecord/?id='.$forms[$i]->{'f_id'}.'" onClick="return confirmDelete();">Delete</a>';
 								
-							// echo '</td>';
-							// echo '</tr>';
-						// }
-					// }
+							echo '</td>';
+							echo '</tr>';
+						}
+					}
 					?>
-						<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:search | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index">
-							<td>{{ datas.booking_ref_no }}</td>
-							<td>{{ convertToDate(datas.form_date) | date:'dd-MMM-yyyy h:mma' }}</td>
-							<td>{{ datas.name }}</td>
-							<td>{{ datas.nric }}</td>
-							<td>{{ datas.mobile }}</td>
-							<td>{{ datas.funding_amt | currency }}</td>
-							<td><span class="label {{(datas.inv_status == 0)? 'label-warning' : 'label-success'}}">{{ (datas.inv_status == 0) ? 'Pending' : 'Approved' }}</span></td>
-							<td>
-								<a href="<?php echo base_url(); ?>invoice/addFromForm/?id={{datas.f_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>form/deleteRecord/?id={{datas.f_id}}" onclick="return confirmDelete();">Delete</a>
-							</td>
-						</tr>
-					
 					</tbody>
 				</table>
-				<a href=""><div pagination="" page="currentPage" max-size="4" on-select-page="setPage(page)" boundary-links="true" total-items="filteredItems" items-per-page="entryLimit" class="pagination-small" previous-text="&laquo;"	 next-text="&raquo;"></div></a><br>
 				<?php echo $this->pagination->create_links(); ?>
 		
             </div><!--/porlets-content-->

@@ -37,7 +37,7 @@ class Director extends CI_Controller {
 		
 		$data['active'] = 'director';
 		
-		$per_page = 10000;
+		$per_page = 20;
 		$data['per_page'] = $per_page;
 		
 		$limit = $per_page;
