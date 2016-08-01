@@ -1,0 +1,624 @@
+https://www.crossover.com	------------------  the best remote job search site
+
+My Future Products
+1. Shweyee Wholesale POS (Php, Mysql)  If data are very much change Nodejs and MongoDb 
+2. Cinema Project for school (Laravel, Mysql, Angular2)	
+3. Onlineshop(Laravel, Mysql, Nodejs, MongoDB) Inluding facebook, chatting, payment
+4. Online Ticketing System (Nodejs, MongoDB)
+5. Chatting application including file sending (Native Android)
+6. Study Java by attending Prologic
+7. HR Management System(Java)
+
+
+
+
+HeinHtetAungInnovix
+heinhtetaungino123
+
+
+
+https://www.bestonlinecourses.info/json-tutorial-for-beginners/    ------------------ json tutorial
+
+http://www.scriptcase.net/scriptcase-samples/ ----------------------  jason application
+
+a7fc9995bdc42e37a0658f6165f628a4 ----------- tony old password
+
+
+http://www.w3schools.com/sql/sql_join.asp ----------------------  sqljoin
+
+http://www.xe.com/currencyconverter/convert/?Amount=650&From=SGD&To=MMK  -------  currency converter
+
+http://www.oanda.com/currency/converter/ -------  currency converter
+
+
+http://www.w3schools.com/angular/default.asp ------------------ angular js
+
+http://learn.jquery.com/using-jquery-core/   --------------------- JQuery learning
+
+https://www.whatismyip.com/what-is-a-proxy/	-------------------------  how to look proxy setting
+
+http://venkatphp.blogspot.com/p/php-sample-code.html  ----------  Jquery validation
+
+http://128.199.129.172:8080/  -----------------   Fitin Part open_cart code
+
+
+http://www.opencart.com/ -----------------  open cart site
+
+http://curvepixell.com/demos/?theme=Balenashop --------------- very beautiful shopping theme
+
+
+http://www.phpgang.com/mysql-stored-procedure-in-php_9.html -------------------------  stored procedure very good
+
+ftp host: 128.199.129.172
+username:htetAung 
+password : VF2MI0
+
+128.199.129.172:8081
+
+
+http://www.wikihow.com/Get-a-Huge-Butt
+
+password is 123456
+
+RN1484V
+
+C111J
+
+admin@azfilter.com
+pavel@jnbkcorp.com
+
+
+po-income(confirm)-stockin
+
+
+
+http://themes-lab.com/make/admin/layout1/ecommerce-cart.html?quantity=8&quantity=1&quantity=1&firstname=dfd&password=&password2=&lastname=df&username=&emailadress=&address=df&country=df&zip=&state=&city=df&phone=&company=&cart-name=df&cart-number=df&cart-csc=df   ------------------------ good shopping cart template
+
+http://themeforest.net/item/make-admin-template-builder-html-angularjs/10511387   --------------------- template market
+
+
+
+http://code.tutsplus.com/articles/an-introduction-to-stored-procedures-in-mysql-5--net-17843 --------------------------------- store procedure
+
+
+http://www.mysqltutorial.org/mysql-if-function.aspx  	-----------------------------   mysql very good lecture
+
+
+
+
+
+http://www.webmechanix.com/automatically-put-cursor-in-form-field-make-users-happy# 		------------  To put user focus in
+
+
+http://framework.zend.com/manual/1.12/en/zend.pdf.drawing.html			FileParserDataSourse in error 78	------------ Zend Framework drawing
+
+
+https://www.bestonlinecourses.info/json-tutorial-for-beginners/    ------------------ json tutorial
+
+http://www.scriptcase.net/scriptcase-samples/ ----------------------  jason application  **********************
+
+a7fc9995bdc42e37a0658f6165f628a4 ----------- tony old password
+
+http://www.w3schools.com/sql/sql_join.asp ----------------------  sqljoin   **********************
+
+http://www.xe.com/currencyconverter/convert/?Amount=650&From=SGD&To=MMK  -------  currency converter  
+
+http://www.oanda.com/currency/converter/ -------  currency converter   **********************
+
+http://www.w3schools.com/angular/default.asp ------------------ angular js
+
+http://learn.jquery.com/using-jquery-core/   --------------------- JQuery learning   **********************
+
+http://venkatphp.blogspot.com/p/php-sample-code.html  ----------  Jquery validation          **********************
+
+http://128.199.129.172:8080/  -----------------   Fitin Part open_cart code
+
+http://www.opencart.com/ -----------------  open cart site
+
+http://curvepixell.com/demos/?theme=Balenashop --------------- very beautiful shopping theme	
+
+http://www.phpgang.com/mysql-stored-procedure-in-php_9.html -------------------------  stored procedure very good	
+
+http://themes-lab.com/make/admin/layout1/ecommerce-cart.html?quantity=8&quantity=1&quantity=1&firstname=dfd&password=&password2=&lastname=df&username=&emailadress=&address=df&country=df&zip=&state=&city=df&phone=&company=&cart-name=df&cart-number=df&cart-csc=df   ------------------------ good shopping cart template
+
+http://themeforest.net/item/make-admin-template-builder-html-angularjs/10511387   --------------------- template market
+
+
+http://code.tutsplus.com/articles/an-introduction-to-stored-procedures-in-mysql-5--net-17843 --------------------------------- store procedure
+
+
+http://www.mysqltutorial.org/mysql-if-function.aspx  	-----------------------------   mysql very good lecture ( including store procedure ) **********************
+
+
+http://www.smartclient.com		------------------------------------------    demo of nice web application forms
+
+http://www.gsmarena.com/samsung_galaxy_e5-6906.php	----------------------------  Handset price
+
+
+$.trim($tr.find('.brand').text())	-------------------   code for taking text of tr
+
+
+https://github.com/eboominathan/	------------------  Angular Js CRUD
+
+http://fearlessflyer.com/popular/	------------------ Wordpress free themes
+
+
+
+https://jamesflorentino.github.io/nanoScrollerJS/   -------------- scroll bar good
+
+http://www.phpclasses.org/			-------------- very good php learning site
+
+barcode generate code128 sample php code
+
+http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes		--------------------------------  various types of key codes 
+
+http://www.w3schools.com/php/func_string_number_format.asp			-------------------------------- php number format
+
+http://robertsettle.com/2012/07/php-shorthand-if-statements/			-------------------------------- if else statement short
+
+http://blogs.msdn.com/b/pradeepsvs/archive/2014/10/09/difference-between-a-stored-procedure-and-function.aspx
+
+http://codex.wordpress.org/Multilingual_WordPress				-------------------------------- wordpress multilanguage plugin
+
+
+$("#example1").dataTable({	"pageLength" : 25;   "order": [[ 3, "desc" ]]    });				-------------------------------- To change datatable default length 10 to 25
+
+
+https://material.angularjs.org/latest/#/			/// angular material very good
+
+
+
+https://www.epinion.me/login.php?utm_source=facebook&utm_medium=fbnewsfeed&utm_campaign=yrx6bw&utm_content=yrx6bw_U_18_00&utm_survey=yrx6bw&utm_gender=u&utm_locale=z1_MM ------- survey money
+
+http://www.w3resource.com/javascript/form/javascript-date-validation.php --- reference
+
+window.location.pathname; // Returns path only js
+var url      = window.location.href;     // Returns full URL js
+$_SERVER['PHP_SELF']		// Return path php
+
+http://www.netdataentryjobs.com/				///////// data entry job at home
+
+https://developers.google.com/structured-data/ ---------------- Structuer data use for seo
+
+http://www.mmcalendar.com/index.php?typeMonth=m&&setDay=18-9-1377	--------------------------------------  Myanmar Calendar
+
+
+https://doc-0o-94-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/da7r3th2rasc4l60cckeul8ct2omvisq/1441274400000/11740375451118810973/*/0B_dlrHnZ7XAfSVJyMDNOSkdsVFE?e=download			-------------------------------------		angularjs only CRUD
+
+git push --force origin feature		-------------------------------------		using git push force keyword
+
+
+http://curran.github.io/screencasts/introToAngular/exampleViewer		---------------------    angular js 50 examples very good
+
+http://www.myanmarjobsdb.com/jobs/admin-staff-sat-sun-day-off-2/		---------------------    job for ei
+
+http://php.net/manual/en/function.in-array.php				---------------------	 array search value	
+
+http://www.atilus.com/what-does-a-website-cost-web-site-development-costs/		=-=-=-=-=   International websites costs
+
+http://www.myanmarwebdesigner.com/website-quotation.html
+
+http://bracketmyanmar.com/our-services/
+http://www.netscriper.com/web-design/
+
+
+https://gist.github.com/kmaida/06d01f6b878777e2ea34			-------------------     Recent tab
+
+http://ajenti.org/#section-downloads					-------------------	Python frame work
+
+
+        $scope.name = "hein";						-------------------  angular code to search data in json file
+        $http.get('countries.json').success(function(data) {
+          var country = data.filter(function(entry){
+            return entry.name === $scope.name;	// return array contain hein
+          })[0];
+          console.log(country);
+        });
+
+http://avenir.ro/create-cms-using-codeigniter-3/create-multilanguage-site-codeigniter/		------------------------------		CI 3 language
+
+http://www.sedotube.com/How-to-make-Multilingual-website-in-CodeIgniter-3(Vv1fouP-oSA)	------------------------------		CI Video Trainings including connect paypal
+
+http://www.acledamfi.com.mm/mm/eng/md_publicholiday_2015		----------------------------   public holiday in myanmar
+
+
+http://jobrize.com/register.php		// password hhaino123
+
+
+hein90
+
+https://developer.valvesoftware.com/wiki/Talk:Steam_Web_API 			-----------------------     steam api
+
+https://heinhtetaung-innovix@bitbucket.org/jn_dev/jnbk.git	------------  jnbk git
+
+how to set time out while cloning in sorucetree
+
+https://malwaretips.com/blogs/ads-by-high-stairs-removal/	------------  how to remove ads virus
+
+
+https://api.steampowered.com/IEconDOTA2_570/GetGameItems/v0001/?key=795DDF7390859271C8FC764FBC0B7354&steamid=76561198088425636&format=json
+
+
+filter:{ itemname: search1, type: search1, hero:herosel1, qualityname:qualitysel1, rarity:raritysel1 } 	------------	 angular multi filter
+
+
+
+www.jikiu.com	ftb server	 www.jikiu.com-- username:jikiu001, password:acMUmx86yWwVVdf, 
+
+
+	
+@-moz-document url-prefix() {								------------  code for customize style in mozilla
+		.container{
+			background-color: #F17023;
+			min-height: 500px;
+			width: 843px;
+			margin-left: 26.8px;
+		}
+	}
+
+
+https://docs.angularjs.org/tutorial/index			------------------------		angular and node.js tutorial
+
+
+ $('html,body').animate({scrollTop: $("section:eq("+to+")").offset().top-36},'slow');		--------	code to scroll top to bottom
+
+To learn
+
+- SEO
+- Cake
+- Laravel
+- Android
+- Java(Spring, Strut, Hybernate), J2EE
+- Japanese Language
+- English Language
+- Archido
+
+
+ftp host : www.jnbk-brakes.com
+username : heinhaung
+password : CDUM7ugPj6FKWNPjkiG
+
+
+https://github.com/Philipp15b/go-steam/blob/master/tradeoffer/client.go#L79  ---- Cancel trade offer link
+https://api.steampowered.com/IEconService/GetTradeOffers/v1/?key=xx&get_received_offers=1&get_sent_offers=1&active_only=1&format=json
+
+https://developer.valvesoftware.com/wiki/Steam_Web_API/IEconService
+
+http://stackoverflow.com/questions/27540315/how-to-create-a-post-with-request-in-php-or-javascript	--- Cancel Trade Offer
+
+
+
+http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery		---------------------       making accordion by myself
+
+
+
+shwe fm 6 years anniversary min kyaut down
+
+
+http://blog.ericlamb.net/2009/08/full-text-searching-in-mysql/ 				---------------- to study search like google
+
+http://dev.mysql.com/doc/refman/5.0/en/fulltext-natural-language.html			---------------- to study full text search
+	SELECT *,
+         MATCH(link_title,link_desc,link_destination) AGAINST('job  work house' IN BOOLEAN MODE) AS SCORE
+FROM tracking_links
+         WHERE MATCH(link_title,link_desc,link_destination) AGAINST('job  work house' IN BOOLEAN MODE);
+
+
+
+Third Year project 
+--- Air Ticketing Services Websites ---
+The user can buy ticket from websites
+But he must pay the services charges 
+he do not need to go anywhere
+
+--- Travel and Tour guide Project ----
+The travel and tour company post their tour package
+User read and down payment
+We take charges from tour company
+ 
+--- Cinema Ticketing Services Websites ---
+Cinema post their show time
+The user can buy ticket from websites
+But he must pay the services charges 
+he do not need to go anywhere
+
+
+
+Domain = ezrare.icgmm.com
+FTP  login name    = ezrare@ifashion4you.com
+pass       = ezrare12345
+
+
+db name = ifashion_ezrare
+u name    = ifashion_ezrare
+pass    = 123qazxsw
+
+
+
+https://github.com/halipso/php-steam-tradeoffers/blob/master/classes/steam.class.php			-----------  		steam trade offer code
+
+https://lab.xpaw.me/steam_api_documentation.html#IEconDOTA2_570				----------			steam trade offer
+
+http://stackoverflow.com/jobs/106108/senior-php-developer-nodejs-is-a-plus-lender411-llc?offset=13&allowsremote=true&type=permanent	------  senior php developer remote jobs
+
+http://www.vpgame.com/guess-match-151642.html		--------------------		very good betting site
+
+
+https://docs.angularjs.org/api/ng/filter/filter			---------------------  		multiple filter anuglar
+
+
+http://www.gps-coordinates.net/				---------------------		google latitude longitude maps
+
+
+https://github.com/galetskyivan/steamcommunity-mobile-confirmations	------------------	node.js mobile confirmation
+
+
+Myanpay
+1. heinhtetaung-innovix	 -	username
+2. heinhtetaungino123!@#      -	password
+
+
+NULL website
+heinhtetaung		-	username
+heinhtetaungino123		-	password
+
+
+
+http://skillcrush.com/2014/10/10/sites-finding-remote-work/			--------------------			best remote job site
+
+
+tomorrow to do make trade offer confirmation in javascript
+
+
+http://fortune.jobsinyangon.com/win-tab.php				// apple watch win
+
+
+http://fortune.jobsinyangon.com/					// jobless lucky wheel
+
+job lucky password jobless.com
+fancystar7@gmail.com
+heinhtetaung.sglife@gmail.com
+heinhtetaungino123
+
+
+http://www.tutorialspoint.com/nodejs/			-----------  node.js intro
+
+
+http://stackoverflow.com/questions/7818667/simple-example-to-post-to-a-facebook-fan-page-via-php#comment55359279_7833145		// php facebook autopost
+
+http://phonegap.com/install/			// android with html css javascript
+
+http://www.android-ide.com/tutorial_phonegap.html		// Phone gap ide install
+
+Adobe ID Username password
+heinhtetaung.sglife@gmail.com
+HloveE4ever
+
+
+https://www.upwork.com/o/jobs/browse/?q=steam+api			// freelance steam api trade offer
+
+
+php code for accept api
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+	header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+	header('Access-Control-Allow-Credentials: true');
+	header('Access-Control-Max-Age: 86400');    // cache for 1 day
+}			
+
+
+Node.js change enviroment variable PATH change 
+open mycomputor, right click -> properties -> advanced system setting -> Enviroment variable ->  Edit PATH
+node.js    -> C:\Users\All User\AppData\Roaming\npm
+mongodb -> C:\Program Files\MongoDB\Server\3.2\bin
+
+
+Myanmar housing
+
+host : 192.186.148.120
+username : aungkolin
+pwd : aungkolin@2015
+
+
+
+
+https://blog.stamplay.com/angular-2-getting-started/		// Getting started with angular 2 fully shit!!!
+
+
+Git hup username password
+heinhtetaung-node
+heinhtetaungino123
+
+
+https://www.youtube.com/watch?v=-a4E2eRHHVY&ebc=ANyPxKphClLM3eRowSY5HJt5IVQfbbBsWgT7y8mDCWf2lzc5fytRslCsX7uSrRSYx7R7Q8H1uVG9D69d47oEN6aggjO3mJO45w		---    Angularjs
+
+
+http://tutsnare.com/how-to-install-laravel-on-windows-xampp/#inicio_pagina			-------------------------			Laravel create project very easy
+
+
+https://www.youtube.com/channel/UCGfS15jIidDqpAk9pcCcAHw	// Laravel Video tutorial link
+
+http://www.playwinasia.com/my-mm/winners			---------------------   play win asia prize
+
+http://docs.emmet.io/cheat-sheet/		--------------	sublime easy fill data
+
+
+https://demo.phppointofsale.com/		---------------	php point of sale demo
+
+
+http://www.cathaycineplexes.com.sg/default.aspx	---------------	cinema website
+
+
+Myanmar housing login
+soekabar@gmail.com
+soekabar123
+
+
+http://1000projects.org/projects/		---------------------   so many projects sample
+
+http://adeopos.com/en/			---------------------   pos website
+
+https://www.vendhq.com			---------------------   pos website
+
+http://codecanyon.net/item/stock-manager-advance-with-point-of-sale-module/5403161?s_rank=1(very good)	---------------------   pos themes
+
+https://www.freepdfconvert.com/		----------------------  free pdf convortor
+
+https://offerme.hrdatabank.com/profile/user	----------------------  work in oversea
+
+
+http://www.androidauthority.com/use-remote-web-api-within-android-app-617869/
+
+
+Microsoft account
+username - heinhtetaung.sglife@gmail.com
+password - I'mnow.netmvcdeveloper
+
+
+
+------------ Making to run xampp and .net together ----------------
+If you just want to make Apache run an don't mind which port it is running on, do the following:
+In the XAMPP Control Panel, click on the Apache - 'Config' button which is located next to the 'Logs' button.
+Select 'Apache (httpd.conf)' from the drop down. (notepad should open)
+Do Ctrl + F to find '80'. Click 'find next' three times and change line Listen 80 to Listen 8080
+Click 'find next' again a couple times until you see line ServerName localhost:80 change this to ServerName localhost:8080
+Do Ctrl + S to save and then exit notepad.
+Start up Apache again in the XAMPP Control Panel, Apache should successfully run.
+Use http://localhost:8080/ in your browser address bar to check everything is working.
+Also you may have problems running XAMPP while running IIS. If you are running IIS it might be worth stopping the service then starting XAMPP.
+------------ Making to run xampp and .net together ----------------
+
+
+http://www.aspdotnet-suresh.com/2015/01/install-sql-server-2008-r2-on-windows-8-1-step-by-step-process-with-images.html		---- sql server installation
+
+
+/// php code for file upload and rename
+$temp = explode(".", $_FILES["photo"]["name"]);
+$newfilename = $_POST['filename'] . '.jpg';
+move_uploaded_file($_FILES["photo"]["tmp_name"], $dir . $newfilename);
+
+
+$("#firstlayerphotoframe").load(location.href+" #firstlayerphotoframe>*","");		// jquery code for div reload
+
+
+db - demonmya_demonwp
+dbuser - demonmya_demonwp
+dbpw   - 9U{Z1,OdkQnr
+
+
+https://www.freelancer.com/projects/angular-js/Angular-developer-backup-coder-part/#placebid		// Angular js Developer Backup Coder part time work
+https://www.freelancer.com/projects/angular-js/Only-for-extreme-professional-AngularJS/?utm_campaign=latest_project_contest&utm_medium=email_notification&utm_source=project_title&utm_content=html&ttref=Project_LPCNhtml&uniqid=11317642-1468-5728e5d2-040fd81f&linkid=15#placebid
+https://www.freelancer.com/projects/C-Sharp-Programming/Software-development-Full-stack-Angular-10402558/?utm_campaign=latest_project_contest&utm_medium=email_notification&utm_source=project_title&utm_content=html&ttref=Project_LPCNhtml&uniqid=11317642-1468-57291c8d-6b8dddbd&linkid=4
+
+http://www.thitsarparamisociety.com/			-------------------- dhamma download
+
+https://www.youtube.com/watch?v=8titJuvhNl0&index=5&list=PLLYO0Qmbv5pvGjpI6Cyg3mVBoYtG_LK63	-------------------------   Umbraco Special Links
+
+https://www.youtube.com/watch?v=sDQwu_DzYyc				------------- Umbraco link
+
+http://carlosmartinezt.com/2014/06/umbraco-7-and-mvc-practical-examples/		------------- Umbraco link
+
+https://umbraco.com/follow-us/blog-archive/2015/7/29/upgrading-your-umbraco-site-to-mvc5-and-webapi2/	------------- Umbraco Upgrade to MVC
+
+https://docs.nuget.org/consume/installing-nuget					------------ nuget update
+
+https://our.umbraco.org/documentation/reference/routing/custom-controllers		------------ Umbraco Custom Controller
+
+http://stackoverflow.com/questions/24275104/angular-asp-net-mvc-binding
+
+http://www.infragistics.com/community/blogs/dhananjay_kumar/archive/2015/05/13/how-to-use-angularjs-in-asp-net-mvc-and-entity-framework-4.aspx
+
+
+remote jobs site
+https://medium.com/@rdutel/200-startups-hiring-remotely-in-2016-1d4299e5163f#.4f50m8h0n
+http://jobs.remotive.io/
+http://www.pcsproofyourcareer.com/contest/
+http://www.remotetrotters.com/
+
+
+https://msdn.microsoft.com/en-us/library/zdtaw1bw%28v=vs.110%29.aspx  // C# code for datetime.tostring
+
+https://www.jobnet.com.mm/en/job-details/senior-php-developer-or-architect-venari-consulting-services/4623	---- php developer 30 LHK
+
+
+http://www.wpbeginner.com/wp-tutorials/how-to-fix-this-site-ahead-contains-harmful-programs-error-in-wordpress/  
+
+http://www.wpbeginner.com/beginners-guide/how-to-add-your-wordpress-site-to-google-webmaster-tools/----- demonmyanmar.com fix
+
+https://www.fatlabwebsupport.com/wanted-part-time-wordpress-developer/	-----	remote wordpress developer
+
+
+https://www.wix.com/support/html5/article/submitting-your-sitemap-directly-to-google		----- uploading sitemap to google
+
+https://msdn.microsoft.com/en-us/library/aa288452(VS.71).aspx	------------------  reading data from .dat file
+http://www.nullskull.com/q/10254433/how-can-i-read-data-from-dat-files.aspx
+
+
+http://www.techmacho.com/download-facebook-messenger-for-pc-laptop-windows-7-8-xp-mac/  --------- download link for bluestacks installing android app on window
+
+http://www.myanmarmobileapp.com/2013/06/15/bluestacks-%E1%80%99%E1%80%BD%E1%80%AC-root-%E1%80%B1%E1%80%96%E1%80%AC%E1%80%80%E1%80%B9%E1%80%BB%E1%80%95%E1%80%AE%E1%80%B8-%E1%80%BB%E1%80%99%E1%80%94%E1%80%B9%E1%80%99%E1%80%AC%E1%80%85%E1%80%AC/
+
+http://kyawsan7.blogspot.com/2014/03/bluestacks-app-player-beta-1-root.html
+
+http://my.naukri.com		----- indian job site
+
+
+balance : 6643
+
+
+https://codex.wordpress.org/Function_Reference		-------------	wordpress functions
+
+
+https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/   ------------  Placing multiple markers on a Google Map (Using API 3)
+
+
+http://www.javascript-coder.com/files/form-submit/javascript-form-submit-example.html	 press any button without use ajax	--- submit from js without 
+http://www.javascript-coder.com/javascript-form/javascript-form-submit.phtml		--- submit from js without 
+
+
+SQLEXPRESS2012
+sa
+admin@2016
+
+https://onedrive.live.com/edit.aspx?cid=07f86ba3f51132f5&page=view&resid=7F86BA3F51132F5!111&parId=7F86BA3F51132F5!103&app=Excel	----- asmc time boxing link
+
+
+---------------- Free hosting ----------------------
+cPanel Login Details
+
+Username: hhahosti
+Password: k1fX816Yvb
+
+Control Panel URL: http://cpanel.freehosting.com/cpanel
+ 
+
+Domain configuration
+
+If you are using an existing domain with your new hosting account, you will need to update nameservers to point to the nameservers listed below.
+
+Nameserver 1: ns1.freehosting.com
+Nameserver 2: ns2.freehosting.com
+
+
+Temporary preview URL
+
+http://hhahosting.com.preview.services/
+Note that access to preview URL is limited to 3 unique visitors per hour.
+
+FTP client configuration
+
+FTP Host: cpanel.freehosting.com
+Username: hhahosti
+Password: k1fX816Yvb
+Remote directory: public_html
+
+
+Email Settings
+
+For email accounts that you setup, you should use the following connection details in your email program:
+
+IMAP Host Address: cpanel.freehosting.com
+SMTP Host Address: cpanel.freehosting.com
+SSL encryption: optional
+Username: The email address you are checking email for
+Password: As you configured in your control panel
+---------------- Free hosting -------------------------

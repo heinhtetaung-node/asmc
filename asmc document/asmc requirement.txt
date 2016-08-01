@@ -1,0 +1,157 @@
+hi pls see changes needed below:
+Different users in CRM:
+1. Director (director has multiple managers)
+2. Manager (manager has multiple agents)
+3. Agent (agents has multiple customer/funder)
+4. Funder (customer who invest)
+5. Admin
+
+Changes needed:
+
+all date format change to dd-mmm-yyyy, example 10-Jul-2016 for all date in the CRM
+all currency format make sure in this format (100,000.00)
+all tables in the CRM changed to datatable (able to export excel, pdf, print), able to search
+all word ‘customer’ in the CRM change to ‘Funder’
+
+signup form 
+- admin, agent or manager or director also can submit the form
+- if login as agent, manager or director, the form will hide the field: “Booking Ref. Number”, only admin can enter this
+- after submit allow 3 days to edit, list the form submitted in another page accessible within 3 days. 
+- within 3 days they still can update the record. after 3 days the record will be hidden (unless enable by admin)
+- after 3 days, only admin can enable the form to be edited by them again.
+- admin can enable or disable editing of the form submitted
+- when key in customer NRIC, auto search database for existing customer with the NRIC and auto fill the form with customer info.
+- for new customer system will auto generate password and send to admin, funder, agent and director when the form is submitted
+- if funder account doesn't have email, don’t need to send to funder
+- when add new a customer record manually from CRM also send the auto generate password to customer/funder email
+
+1. Manger login
+- under list agent, remove/hide the column agent code, manager name
+- add another column to indicate active/not active (under agent profile can mark the agent as active or not active)
+- under funding record - remove the column manager
+- funding record table add a filter by agent drop down
+- commission table - all word ’invoices' change to ‘contracts’
+- commission table - add a filter by agent drop down
+- commission payout date wrong
+
+2. agent login
+- under funding record, all customer name should be capital letter
+- remove the column agent & manager
+- commission table, the field 'invoice' change to 'contract', hide agent column 
+- add a filter by customer drop down
+- under commission table each column under the date should be $currency format (example 100,000.00), same to the total row
+
+3. funder login
+- funding record table, hide manager column
+
+
+
+
+
+
+
+
+Time analysis
+
+Different users in CRM:
+1. Director (director has multiple managers)	
+2. Manager (manager has multiple agents)		
+3. Agent (agents has multiple customer/funder)	
+4. Funder (customer who invest)					
+5. Admin
+
+Changes needed:
+
+all date format change to dd-mmm-yyyy, example 10-Jul-2016 for all date in the CRM	-	30min
+all currency format make sure in this format (100,000.00)							- 	30min
+all tables in the CRM changed to datatable (able to export excel, pdf, print), able to search	- 4hour
+	Can I use angular js for this instead using datatables because it hard to maintain but angular can easily and more powerful?	
+all word ‘customer’ in the CRM change to ‘Funder’												- 30min
+
+signup form 
+- admin, agent or manager or director also can submit the form	-	30min
+- if login as agent, manager or director, the form will hide the field: “Booking Ref. Number”, only admin can enter this - 15min
+- after submit allow 3 days to edit, list the form submitted in another page accessible within 3 days. 
+	"list the form submitted in another page" means adding new listing page for signup form. if click edit go to signup form page and show data 	
+- within 3 days they still can update the record. after 3 days the record will be hidden (unless enable by admin)	-	1hour
+- after 3 days, only admin can enable the form to be edited by them again.	- 30min
+- admin can enable or disable editing of the form submitted	- 30min
+- when key in customer NRIC, auto search database for existing customer with the NRIC and auto fill the form with customer info.
+	Do you mean auto complete customer? If true -	4hour	
+- for new customer system will auto generate password and send to admin, funder, agent and director when the form is submitted	
+	This page may be not related with 'signup form page' it may be in add customer page isn't it?	
+- if funder account doesn't have email, don’t need to send to funder
+- when add new a customer record manually from CRM also send the auto generate password to customer/funder email
+	can you please explain this requirement clearly again?
+
+1. Manger login
+- under list agent, remove/hide the column agent code, manager name		-	10min
+- add another column to indicate active/not active (under agent profile can mark the agent as active or not active)	-	30min
+- under funding record - remove the column manager	-	10min
+- funding record table add a filter by agent drop down	- 15min
+- commission table - all word ’invoices' change to ‘contracts’	- 5min
+	can you please explain how to add commission data and where is this data taken?
+- commission table - add a filter by agent drop down	- 15min
+- commission payout date wrong	
+	please provide what's wrong and how to do?
+
+2. agent login
+- under funding record, all customer name should be capital letter	-	10min
+- remove the column agent & manager									-	10min
+- commission table, the field 'invoice' change to 'contract', hide agent column -	10mmin
+- add a filter by customer drop down	- 15min
+- under commission table each column under the date should be $currency format (example 100,000.00), same to the total row	- 10min
+
+3. funder login
+- funding record table, hide manager column		- 10min
+
+
+Ask to Mr.cayden
+1. In Changes needed: 
+	- all tables in the CRM changed to datatable (able to export excel, pdf, print), able to search	- 4hour
+		Can I use angular js for this instead using datatables because it hard to maintain but angular can easily and more powerful?
+
+2. In signup form
+	- after submit allow 3 days to edit, list the form submitted in another page accessible within 3 days. 
+		"list the form submitted in another page" means adding new listing page for signup form. if click edit button go to signup form page and show data and can update	
+	
+	- when key in customer NRIC, auto search database for existing customer with the NRIC and auto fill the form with customer info.
+	- for new customer system will auto generate password and send to admin, funder, agent and director when the form is submitted	
+		This page may be not related with 'signup form page' it may be in add customer page isn't it?	
+	- if funder account doesn't have email, don’t need to send to funder
+	- when add new a customer record manually from CRM also send the auto generate password to customer/funder email
+		can you please explain this requirement clearly again?
+
+3. Manger login
+	- commission table - all word ’invoices' change to ‘contracts’	
+		can you please explain how to add commission data and where is this data taken?
+	- commission payout date wrong	
+		please provide what's wrong and how to do?
+
+Can you give me the director, manager, agent, funder account that have data
+		
+
+
+Cayden answer
+1. In Changes needed: 
+ - all tables in the CRM changed to datatable (able to export excel, pdf, print), able to search 
+  Can I use angular js for this instead using datatables because datatable hard to maintain but angular can easily and more powerful?
+- Yes
+
+2. In signup form
+ - after submit allow 3 days to edit, list the form submitted in another page accessible within 3 days. 
+  Confirm: "list the form submitted in another page" means adding new listing page for signup form. if click edit button go to signup form page and show data and can update 
+ 
+ - when key in customer NRIC, auto search database for existing customer with the NRIC and auto fill the form with customer info.
+ - for new customer system will auto generate password and send to admin, funder, agent and director when the form is submitted 
+  Question: This page may be not related with 'signup form page' it may be in add customer page isn't it? 
+* yes, thanks for this, same apply to add customer also.
+ - if funder account doesn't have email, don’t need to send to funder
+ - when add new a customer record manually from CRM also send the auto generate password to customer/funder email
+  can you please explain this requirement clearly again? * yes this is what u mean the same thing apply to add customer page
+
+3. Manger login
+ - commission table - all word ’invoices' change to ‘contracts’ 
+  Question: can you please explain how to add commission data and where is this data taken?
+ - commission payout date wrong * this part i’ll give u all the calculation for commission. they are actually based on percentage
+  Question: please provide what's wrong and how to do?
