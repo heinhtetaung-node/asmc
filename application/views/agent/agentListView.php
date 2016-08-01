@@ -43,57 +43,84 @@ function confirmDelete() {
               	$this->session->unset_userdata('success');
               }
               ?>
-              <form method="get" action="<?php echo base_url();?>agent">
+              <!--<form method="get" action="<?php //echo base_url();?>agent">
               		Search: <input type="text" name="search" />
               		<input type="submit" class="btn btn-primary" value="Search" name="submit"/>
+              	</form>-->
+				<form method="get" action="<?php echo base_url();?>agent">
+              		Search: <input type="text" name="search" ng-model="search" ng-change="filter()" placeholder="Filter" />
+					<select ng-model="entryLimit" class="sel_entryLimit">
+						<option ng-selected="true">20</option>
+						<option>30</option>
+						<option>50</option>
+						<option>100</option>
+						<option>200</option>
+						<option>300</option>
+						<option>500</option>
+					</select>
+              		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
               	<br/>
              	<table class="table table-bordered">
 					<thead>
 					<tr>
 						<th>No.</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Agent Code</th>
-						<th>Manager</th>
-						<th>Last Login</th>
-						<th>Created Date</th>
+						<th ng-click="sortField = 'agent_name'; reverse = !reverse"><a href="">Name</a></th>
+						<th ng-click="sortField = 'agent_email'; reverse = !reverse"><a href="">Email</a></th>
+						<th ng-click="sortField = 'agent_code'; reverse = !reverse"><a href="">Agent Code</a></th>
+						<th ng-click="sortField = 'm_name'; reverse = !reverse"><a href="">Manager</a></th>
+						<th ng-click="sortField = 'agent_login_date'; reverse = !reverse"><a href="">Last Login</a></th>
+						<th ng-click="sortField = 'agent_created_date'; reverse = !reverse"><a href="">Created Date</a></th>
 						<?php
 						if ($this->session->userdata('user_type') == 'admin') {?>
 							<th>Action</th>
 						<?php }?>
 					</tr>
 					</thead>
-					<tbody>
+					<tbody ng-init="getdatas(<?php echo htmlspecialchars(json_encode($agents,JSON_NUMERIC_CHECK)); ?>)">
 					
 					<?php
-					if (isset($agents) && count($agents) > 0) {
-						$page = isset($_GET['p']) && $_GET['p'] != '' ? $_GET['p'] : 1;
-						$start = ($page - 1) * $per_page;
+					// if (isset($agents) && count($agents) > 0) {
+						// $page = isset($_GET['p']) && $_GET['p'] != '' ? $_GET['p'] : 1;
+						// $start = ($page - 1) * $per_page;
 							
-						for ($i = 0; $i < count($agents); $i++) {
-							echo '<tr>';
-							echo '<td>'.($start+$i+1).'</td>';
-							echo '<td>'.$agents[$i]->{'agent_name'}.'</td>';
-							echo '<td>'.$agents[$i]->{'agent_email'}.'</td>';
-							echo '<td>'.$agents[$i]->{'agent_code'}.'</td>';
-							echo '<td>'.$agents[$i]->{'m_name'}.' ('.$agents[$i]->{"m_code"}.')</td>';
-							echo '<td>';
-								if ($agents[$i]->{'agent_login_date'} != null)
-									echo date('Y-m-d H:i:s', strtotime($agents[$i]->{'agent_login_date'}));
-								else
-									echo '-';
-							echo '</td>';
-							echo '<td>'.date('Y-m-d', strtotime($agents[$i]->{'agent_created_date'})).'</td>';
-							if ($this->session->userdata('user_type') == 'admin') {
-								echo '<td><a href="'.base_url().'agent/editAgent/?id='.$agents[$i]->{'agent_id'}.'">Edit</a> | 
-								<a href="'.base_url().'agent/deleteAgent/?id='.$agents[$i]->{'agent_id'}.'" onClick="return confirmDelete();">Delete</a></td>';
-							}
-						}
-					}
+						// for ($i = 0; $i < count($agents); $i++) {
+							// echo '<tr>';
+							// echo '<td>'.($start+$i+1).'</td>';
+							// echo '<td>'.$agents[$i]->{'agent_name'}.'</td>';
+							// echo '<td>'.$agents[$i]->{'agent_email'}.'</td>';
+							// echo '<td>'.$agents[$i]->{'agent_code'}.'</td>';
+							// echo '<td>'.$agents[$i]->{'m_name'}.' ('.$agents[$i]->{"m_code"}.')</td>';
+							// echo '<td>';
+								// if ($agents[$i]->{'agent_login_date'} != null)
+									// echo date('Y-m-d H:i:s', strtotime($agents[$i]->{'agent_login_date'}));
+								// else
+									// echo '-';
+							// echo '</td>';
+							// echo '<td>'.date('Y-m-d', strtotime($agents[$i]->{'agent_created_date'})).'</td>';
+							// if ($this->session->userdata('user_type') == 'admin') {
+								// echo '<td><a href="'.base_url().'agent/editAgent/?id='.$agents[$i]->{'agent_id'}.'">Edit</a> | 
+								// <a href="'.base_url().'agent/deleteAgent/?id='.$agents[$i]->{'agent_id'}.'" onClick="return confirmDelete();">Delete</a></td>';
+							// }
+						// }
+					// }
 					?>
+						<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:search | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index">
+							<td>{{ $index+1 }}</td>
+							<td>{{ datas.agent_name }}</td>
+							<td>{{ datas.agent_email }}</td>
+							<td>{{ datas.agent_code }}</td>
+							<td>{{ datas.m_name }}</td>
+							<td>{{ datas.agent_login_date }}</td>
+							<td>{{ datas.agent_created_date }}</td>
+							<td>
+								<a href="<?php echo base_url(); ?>asmc/admin/editAgent/?id={{datas.agent_id}}">Edit</a> | 
+								<a href="<?php echo base_url(); ?>asmc/admin/deleteAgent/?id={{datas.agent_id}}" onclick="return confirmDelete();">Delete</a>
+							</td>
+						</tr>
 					</tbody>
 				</table>
+				<a href=""><div pagination="" page="currentPage" max-size="4" on-select-page="setPage(page)" boundary-links="true" total-items="filteredItems" items-per-page="entryLimit" class="pagination-small" previous-text="&laquo;"	 next-text="&raquo;"></div></a><br>
 				<?php echo $this->pagination->create_links(); ?>
 		
             </div><!--/porlets-content-->

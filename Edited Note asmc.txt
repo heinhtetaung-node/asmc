@@ -1,0 +1,4 @@
+Edited Note ASMC
+
+Aug 1, 2016
+1. add angularjs file

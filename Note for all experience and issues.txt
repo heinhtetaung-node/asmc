@@ -1,0 +1,692 @@
+My balance: 6743
+New balance: 7743
+
+My Skills
+- Front End
+	1. HTML, CSS, Photoshop
+	2. Javascript
+		(1) Jquery
+		(2) AngularJS 1
+	
+- Back End
+	1. PHP
+		(1) CodeIgnitor CI (Framework)
+		(2) Wordpress (CMS)
+		(3) Laravel (Framework)
+		- DB 
+			Mysql
+		
+		*** Portfolio ***
+		1. jnbk
+		2. mjnbk
+		3. jnbkcorp
+		4. ezrare
+		5. smallbank
+		6. pos_wholesale
+		7. adminforallbrand		
+		8. nibk.net
+		9. www.jikiu.com
+		10. sbparts.net
+		11. azfilter.com
+		12. js-filter.com
+		13. Myanmarjob20s
+		14. mtsmyanmar
+		15. Demon Myanmar
+		16. Cinema Project for school (Laravel, Mysql, Angular1)	--- Future
+		17. Onlineshop(Laravel, Mysql, Nodejs, MongoDB, Angular2) Inluding facebook, chatting, payment	--- Future
+		18. Web Service Portfolio Website Online payment including, Sell pos and other products(Laravel, Mysql, Angular2) --- Future		
+		19. Customer project(Laravel, Mysql, Angular2) --- Future
+		
+	2. C#
+		(1) Umbraco (CMS)
+		(2) Asp.Net MVC (Framework)
+		- DB
+			Microsoft Sql Server
+			
+		*** Portfolio ***
+		1. http://ctm.innovix-solutions.net/
+		2. http://mnc.innovix-solutions.net/
+		3. http://mbh.innovix-solutions.net/
+		4. http://ppcs.innovix-solutions.net/
+		5. http://ch.innovix-solutions.net/
+		6. http://www.myanmarhousing.com.mm/
+		7. CDL -> http://www.cdlhome.com.sg/
+		8. POS
+		
+
+	3. Node.js
+		(1) Express (Framework)
+		- DB
+			MongoDB
+		
+- Android 
+	1. PhoneGap(Cordova)
+	
+- Ecommerce Payment Gateway
+	1. 2c2p 
+	*** Portfolio ***
+	ctm.innovix-solutions.net
+
+	
+issue (1){
+	In pos_wholesale, json_encode with utf8	
+	$Units=json_encode($arr, JSON_UNESCAPED_UNICODE);
+}
+
+issue (2){
+	jquery code for keyup enter event
+	
+	$( "#brand" ).keyup(function(e) {
+		if(e.which == 13){
+			alert("ei");
+		}
+	});
+	
+	angular code
+	
+	ng-keyup="checkenter($event)"
+	
+	$scope.checkenter = function(e){
+		if(e.keyCode==13){
+			$scope.savedata();
+			$scope.brand_name  =  "";
+			$('#brand').focusout();
+		}
+	}
+}	 
+
+issue(3){
+	jquey code for disabled element
+	$('.smallunitname').prop( "disabled", true );
+}
+
+issue(4){
+	jquery code for hasClass check class exist
+	.hasClass( "quux" )
+}
+
+issue(5){
+	php array push function 
+	
+	$arr1=array(
+					'unitname' => $data['smallunitname'],
+					'unitvalue' => 1,
+					'baseunit' => 1	
+				);
+				
+	array_push($arr, $arr1);
+}
+
+issue(6){
+	array check value exist by value 
+
+	alert(notallowunits.indexOf(jsonObj[a].unitname));
+	
+	if(exist){ 
+		return indexof arr;
+	}else{
+		return -1;
+	}
+}
+
+issue(7){
+	
+	jquery code for get select option name from select
+	
+	$('#statedivision_id option:selected').text();
+
+}
+
+isssue(8){
+
+	jquery page up code smothlly
+	
+	http://tympanus.net/codrops/2010/01/03/scrolling-to-the-top-and-bottom-with-jquery/
+	
+	$('html, body').animate({scrollTop: '0px'}, 800);
+	
+	<script type="text/javascript" src="js/scroll-startstop.events.jquery.js" type="text/javascript"></script>
+}
+
+
+issue(9){
+	php email send function
+	<?php
+
+	$to = "heinhtetaung.sglife@gmail.com";
+	$subject = "Project Detail From Demon Myanmar Website By ". $_POST['name'];
+
+	$budget="";
+	if(isset($_POST['budget'])){
+		$budget="
+		<tr>
+		<th>Budget</th>
+		<td>".$_POST['budget']."</td>
+		</tr>
+		<tr>
+		<th>Type of Work</th>
+		<td>".$_POST['typeofwork']."</td>
+		</tr>";
+	}
+
+	$message = "
+	<html>
+	<head>
+	<title>".$_POST['name']."</title>
+	</head>
+	<body>
+	<p>".$_POST['projectDetail']."</p>
+	<table>
+	<tr>
+	<th>Name</th>
+	<td>".$_POST['name']."</td>
+	</tr>
+	<tr>
+	<th>Phone</th>
+	<td>".$_POST['phone']."</td>
+	</tr>
+	<tr>
+	<th>Email</th>
+	<td>".$_POST['email']."</td>
+	</tr>".$budget."
+	</table>
+	</body>
+	</html>
+	";
+
+	// Always set content-type when sending HTML email
+	$headers = "MIME-Version: 1.0" . "\r\n";
+	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+	// More headers
+	$headers .= 'From: <contact@demonmyanmar.com>' . "\r\n";
+	$headers .= 'Cc: heinhtetaung.sglife@gmail.com' . "\r\n";
+
+	mail($to,$subject,$message,$headers);
+	$res=true;
+	echo json_encode($res);
+	?> 
+}
+
+issue(10){	
+	------------------  angular js using jquery this -------------------------
+
+	<tr><td><a ng-click="aClick($event)">Click Me</a></td></tr>
+
+	  $scope.aClick = function(event) {
+		 $(event.target).parent().parent().css('display','none');
+	  };
+
+	http://stackoverflow.com/questions/16163978/get-the-this-in-angularjs ----- reference link
+}
+
+issue(11){
+	----------------- very complete number format validation --------------
+	<input type="text" value="{{p.cost}}" class="cost md txt" ng-keydown="keydowncheck($event)" />
+
+	$scope.keydowncheck = function (e) {
+			
+			var $this = $(e.target);
+			var keycode = e.which;
+			//alert(keycode);
+			if (keycode == 13) {
+				$scope.editrow(e);
+			}
+
+			if (keycode != 13 && keycode != 9) {
+				if (!$scope.isNumber(e.key) && keycode != 39 && keycode != 8 && keycode != 37) {
+					if (!$this.hasClass('qty')) {
+						if (keycode != 110 && keycode != 190) {
+							e.preventDefault();
+							return false;
+						}
+					}else {
+						e.preventDefault();
+						return false;
+					}
+				}
+				if (keycode != 39 && keycode != 8 && keycode != 37) {
+					$tr = $this.closest('tr');
+					$tr.addClass('unsave');
+				}
+        }
+    }
+}
+
+issue(12){
+	----------------- datepicker checkin checkout validation --------------
+	<script>
+		$(document).ready(function () {
+		 $('#datepicker-2').datepicker('setDate', null);
+		$('#datepicker-1').datepicker({
+			onSelect: function (date) {
+				var date = $(this).datepicker('getDate');
+				if (date) {
+					date.setDate(date.getDate() + 1);
+					$("#datepicker-2").datepicker();
+					//$('#datepicker-2').datepicker('setDate', null);
+					$("#datepicker-2").datepicker("option", "minDate", date);
+
+				}
+			}
+	  });
+	})
+	</script>
+}
+
+
+issue(13){
+	-------------------- c# CODE for check size of object ------------------
+	CurrentPage.jobScope.Length>0
+	var rooms = a.Children.Where("DocumentTypeAlias == \"hotelChild\"").ToList();    
+				
+	@rooms.Count()
+}
+
+issue(14){	
+	-------------------- Umbraco CODE for get data from multi node picker split ------------------
+	@{
+
+		string s = CurrentPage.tourPackagePicker ;
+					
+		string[] ids = s.Split(',');
+				
+	}
+				
+	@foreach (var id in ids) {
+				
+		var c = Umbraco.Content(id);	
+	}
+}
+
+
+issue(15){
+	----------------------- Placing multiple markers on a Google Map (Using API 3) --------------------------
+	https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/ 
+}
+
+
+issue(16){
+	----------------------- C# code for creating dynamic object and adding data without object ---------------
+	----------------------- C# data change to json  ---------------
+	@{                   
+		var items = new List<dynamic>();         
+		foreach(var content in @CurrentPage.Children.Where("NodeTypeAlias == \"photoGalleryChild\""))
+		{
+			var photo = "";
+			var photocondi = content.Photo;
+			if (photocondi > 0)
+			{
+				photo = Umbraco.Media(content.Photo).Url;    
+			}
+
+			items.Add(new
+			{
+				title = content.title,
+				description = content.description,
+				tagsName = content.tagsName,
+				Photo = photo
+			});	 
+		}
+		var o = new {
+			items = items
+		}; 
+		string json = Json.Encode(o);	
+	}
+}
+
+
+issue(17){
+	--------------------  store procedure in C# MVC --------------------------
+
+	http://www.entityframeworktutorial.net/EntityFramework5/CRUD-using-stored-procedures.aspx	-----	The best examples
+
+	https://www.google.com/search?newwindow=1&client=firefox-b-ab&q=+Single+Stored+Procedure+For+Insert+Update+with+mvc&oq=+Single+Stored+Procedure+For+Insert+Update+with+mvc&gs_l=serp.3...1031937.1036180.0.1036423.10.10.0.0.0.0.129.918.8j2.10.0....0...1c.1.64.serp..0.5.510...0j0i22i30j0i20j33i21.r0wnDBHFS1Q
+
+	http://www.dotnetfunda.com/articles/show/2143/insert-update-delete-in-gridview-using-single-stored-procedure
+
+	https://www.mindstick.com/Articles/1110/select-insert-update-and-delete-using-stored-procedure-in-asp-dot-net-mvc4
+
+	http://www.aspsnippets.com/Articles/GridView-CRUD-Select-Insert-Edit-Update-Delete-using-Single-Stored-Procedure-in-ASPNet.aspx
+
+	http://www.entityframeworktutorial.net/EntityFramework4.3/execute-stored-procedure-using-dbcontext.aspx
+
+	https://www.youtube.com/watch?v=kHEss1i5LHM
+
+	http://stackoverflow.com/questions/20970416/using-stored-procedure-in-entity-framework
+
+	http://stackoverflow.com/questions/26374592/mvc-5-entity-framework-6-execute-stored-procedure
+
+	https://www.youtube.com/watch?v=hCnhlUNR9rc
+
+
+	db.sp_InsertStudentInfo(student.StudentName);
+
+	USE [StoreProcedureMVC]
+	GO
+	/****** Object:  StoredProcedure [dbo].[sp_InsertStudentInfo]    Script Date: 06/28/2016 17:26:06 ******/
+	SET ANSI_NULLS ON
+	GO
+	SET QUOTED_IDENTIFIER ON
+	GO
+	ALTER PROCEDURE [dbo].[sp_InsertStudentInfo]
+		-- Add the parameters for the stored procedure here
+		@StudentName varchar(100)
+	AS
+	BEGIN
+		-- SET NOCOUNT ON added to prevent extra result sets from
+		-- interfering with SELECT statements.
+		SET NOCOUNT ON;
+
+			INSERT INTO [StoreProcedureMVC].[dbo].[Students]([StudentName])
+			VALUES(@StudentName)
+
+		SELECT SCOPE_IDENTITY() AS StudentId
+
+	END
+
+
+	-------------------- Insert into two tables with procedure --------------------------
+
+	ALTER PROCEDURE [dbo].[InsertPatientRecord]
+		-- Add the parameters for the stored procedure here
+		@PatientID INT,
+		@Prescription VARCHAR(50),
+		@VisitDate DATETIME,
+		@ItemID INT,
+		@Amount INT
+		
+	AS
+
+	SET NOCOUNT On
+		
+		DECLARE @RecordID INT
+		
+		if not exists(select 1 from record where RecordID=@PatientID)
+		begin
+			INSERT INTO record VALUES(@PatientID,@Prescription,@VisitDate)
+			SET @RecordID=Scope_Identity()
+		end	
+		 
+		
+		set @RecordID=@PatientID
+		INSERT INTO record_item VALUES(@RecordID,@ItemID,@Amount)
+		
+	https://social.msdn.microsoft.com/Forums/sqlserver/en-US/deca7cd6-3e37-4617-b792-02ad95d14249/stored-procedure-to-insert-two-tables-with-relationship-problem?forum=sqlgetstarted
+}
+
+
+issue(18)({
+	Tag 1: Dynamically Multiple checkbox with samename handle in asp.net 
+	Tag 2: Dynamic Form use in asp.net 
+	Tag 3: Post Form method accept as an Object
+	
+	1. Write Form in views		
+		<input type="checkbox" name="n1visit" value="Yangon"> <span class="checkboxlabel">Yangon</span>
+		<input type="checkbox" name="n1visit" value="Mandalay (old capital)"> <span class="checkboxlabel">Mandalay (old capital)</span>
+		<input type="checkbox" name="n1visit" value="Bagan (Pagan) (old capital)"> <span class="checkboxlabel">Bagan,(Pagan) (old capital)</span>
+		<input type="checkbox" name="n1visit" value="Inle Lake"> <span class="checkboxlabel">Inle Lake</span>
+		
+		<input type="checkbox" name="n2interest" value="adventure"> <span class="checkboxlabel">adventure</span>
+		<input type="checkbox" name="n2interest" value="archaeology & history"> <span class="checkboxlabel">archaeology & history</span>
+		<input type="checkbox" name="n2interest" value="balloon-rides"> <span class="checkboxlabel">balloon-rides</span>
+		<input type="checkbox" name="n2interest" value="bird-watching"> <span class="checkboxlabel">bird-watching</span>
+	
+		<span class="checkboxlabel">Other places:</span><input type="text" name="n1otherplace"> 
+		
+	1. Create Model For Forms fields according to view form field name
+		public class CustomerRequest
+		{
+			public String[] n1visit { get; set; }
+			public String n1otherplace { get; set; }
+			public String[] n2interest { get; set; }
+		}
+					
+	2. accept parameter in controller
+		[HttpPost]
+        public String HandleCustomerRequest(CustomerRequest cr)
+        {
+		
+		}
+});
+
+issue(19)({
+	Tag 1: Adding Facebook light box in web page
+	
+	https://developers.facebook.com/docs/plugins/page-plugin
+
+});
+
+
+issue(20)({
+	Tag 1: submit form without use ajax	 
+	Tag 2: post form without use ajax	 
+	Tag 3: submit from js without use ajax	 
+	
+	http://www.javascript-coder.com/files/form-submit/javascript-form-submit-example.html	 
+	http://www.javascript-coder.com/javascript-form/javascript-form-submit.phtml		--- submit from js without 
+	
+	<script type="text/javascript">
+	function submitform()
+	{
+		document.forms["myform"].submit();
+	}
+	</script>
+	<form id="myform" action="submit-form.php">
+		Search: <input type='text' name='query'>
+		<a href="javascript: submitform()">Submit</a>
+	</form>
+});
+
+issue(21)({
+	Tag 1: javascript code for adding action to form
+	
+	document.getElementById('form_id').action = "script.php"; //Will set it
+});
+
+issue(22)({
+	Tag 1: javascript code for adding input to form
+	
+	http://jsfiddle.net/nj4N4/7/
+});
+
+issue(23)({
+	Tag 1: javascript code for get array key and value dynamically 
+	
+	for (var key in return_data) {
+		inputs = inputs + '<input type="hidden" name="' + key + '" value="' + return_data[key] + '">';
+	}
+});
+
+issue(24)({
+	Tag 1: C# code for get current date time
+	
+	DateTime now = DateTime.Now;
+    string oid = now.ToString();
+});
+
+
+issue(25)({
+	Tag 1: C# code for get current date time only code without any character
+	
+	DateTime now = DateTime.Now;
+	string oid = "000000" + now.ToString("ddMMyyyyhhmmss");
+});
+
+issue(26)({
+	Tag 1: C# code for post Data from backend like php curl
+	
+	NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+
+	queryString["version"] = version;
+	queryString["merchant_id"] = merchant_id;
+	queryString["payment_description"] = payment_description;
+	queryString["order_id"] = order_id;
+	queryString["invoice_no"] = invoice_no;
+	queryString["currency"] = currency;
+	queryString["amount"] = amount;
+	queryString["customer_email"] = customer_email;
+	queryString["user_defined_1"] = user_defined_1;
+	queryString["result_url_1"] = result_url_1;
+	queryString["result_url_2"] = result_url_2;
+	queryString["hash_value"] = hash_value;
+
+	String postdata = queryString.ToString();
+	RequestsExtensions request = new RequestsExtensions();
+	String response = RequestsExtensions.HTTP_POST("https://demo2.2c2p.com/2C2PFrontEnd/RedirectV3/payment", postdata);
+	
+	public class RequestsExtensions
+    {
+        public static string HTTP_POST(string Url, string Data)
+        {
+			WebRequest request = WebRequest.Create("http://demo2.2c2p.com/2C2PFrontEnd/RedirectV3/payment");
+            request.Method = "POST";
+            string postData = Data;
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = byteArray.Length;
+            
+            Stream dataStream = request.GetRequestStream();
+            dataStream.Write(byteArray, 0, byteArray.Length);
+            dataStream.Close();
+            WebResponse response = request.GetResponse();
+            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+            dataStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream);
+            string responseFromServer = reader.ReadToEnd();
+            Console.WriteLine(responseFromServer);
+            reader.Close();
+            dataStream.Close();
+            response.Close();
+
+            return responseFromServer;
+        }
+
+        public static string HTTP_GET(string Url, string Data)
+        {
+            string Out = String.Empty;
+            System.Net.WebRequest req = System.Net.WebRequest.Create(Url + (string.IsNullOrEmpty(Data) ? "" : "?" + Data));
+            try
+            {
+                System.Net.WebResponse resp = req.GetResponse();
+                using (System.IO.Stream stream = resp.GetResponseStream())
+                {
+                    using (System.IO.StreamReader sr = new System.IO.StreamReader(stream))
+                    {
+                        Out = sr.ReadToEnd();
+                        sr.Close();
+                    }
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                Out = string.Format("HTTP_ERROR :: The second HttpWebRequest object has raised an Argument Exception as 'Connection' Property is set to 'Close' :: {0}", ex.Message);
+            }
+            catch (WebException ex)
+            {
+                Out = string.Format("HTTP_ERROR :: WebException raised! :: {0}", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Out = string.Format("HTTP_ERROR :: Exception raised! :: {0}", ex.Message);
+            }
+
+            return Out;
+        }
+    }
+});
+
+issue(27)({
+	Tag 1: C# Mssql code for find and replace string
+	Tag 2: C# Mssql using replace in an update statement
+	
+	Update umbracoDomains
+	SET domainName = REPLACE(domainName, 'http://localhost:10001', 'http://localhost:20001');
+	
+	http://www.sqlteam.com/article/using-replace-in-an-update-statement
+});
+
+issue(28)({
+	Tag 1: JS - Angular can't bind to view when call from jquery
+	Tag 2: JS - Data parsing from jquery to angular function as parameter
+	Tag 3: JS - Angular method with parameter call from jquery really cool
+
+	MainCode({
+		$scope.$apply(function() {
+			$scope.datas22=obj;
+		});
+	});
+	
+	http://stackoverflow.com/questions/11873627/angularjs-ng-model-binding-not-updating-when-changed-with-jquery
+	
+	<script>
+		var obj=[];
+		$(document).ready(function(){
+			$('.sth').click(function(){
+				var arr1={ 'staffno':1, 'costingno':2 };
+				var arr2={ 'staffno':2, 'costingno':2 };
+				obj.push(arr1);
+				obj.push(arr2);
+				angular.element('#maincontroller').scope().getallincomes(obj);
+			});
+		});
+	</script>
+	
+	<button class="sth">click</button>
+	
+	listApp.controller('maincontroller', function ($scope, $http, filterFilter) {
+		$scope.datas22 = [{ staffno: '1', costingno: '1' },{ staffno: '2', costingno: '2' },{ staffno: '3', costingno: '3' }];
+		
+        $scope.getallincomes = function (obj) {
+			$scope.$apply(function() {
+				$scope.datas22=obj;
+			});
+        }
+	});
+});
+
+issue(29)({
+	Tag 1: Server - setting up server and use by other computors need shweyee
+	Right CLick folder and properties click share
+	Right CLick folder and properties remove readonly security change to everyone	
+});
+
+issue(30)({
+	Tag 1: Google Maps API error: ApiNotActivatedMapError
+		- go to google api console
+		- Create Project 
+		- Create Credential
+		- click dashboard 
+		- click enable api
+		
+	Tag 2: Google Maps API error: RefererNotAllowedMapError
+		- go to google api console
+		- Create Project 
+		- Create Credential
+		- Create Browser key
+		- add many links eg: http://localhost:20002/property/location.shtml and localhost:20002/property/location.shtml/
+});
+
+
+issue(31)({
+	Tag 1: angular code to show date with format
+	https://docs.angularjs.org/api/ng/filter/date
+	
+	
+
+<span ng-non-bindable>{{1288323623006 | date:'medium'}}</span>:
+    <span>{{1288323623006 | date:'medium'}}</span><br>
+<span ng-non-bindable>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span>:
+   <span>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span><br>
+<span ng-non-bindable>{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}</span>:
+   <span>{{'1288323623006' | date:'MM/dd/yyyy @ h:mma'}}</span><br>
+<span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:
+   <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span><br>
+
+   Output
+   
+{{1288323623006 | date:'medium'}}: Oct 29, 2010 10:10:23 AM
+{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}: 2010-10-29 10:10:23 +0630
+{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}: 10/29/2010 @ 10:10AM
+{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}: 10/29/2010 at 10:10AM
+});
