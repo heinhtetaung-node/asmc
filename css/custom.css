@@ -1,0 +1,27 @@
+.table-email tr.unread td {
+    background-color: #DFF0D8;
+}
+
+.media a {
+	text-decoration:none;
+}
+
+.read-panel {
+	border-top: none;
+}
+
+.email-summary {
+	color:gray;
+}
+
+.paid-link {
+	color:#5cb85c;
+}
+
+.profile-field {
+	padding-top:7px;
+}
+
+.leftside-navigation {
+	overflow:scroll;
+}
