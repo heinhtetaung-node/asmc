@@ -78,9 +78,10 @@ listApp.run(function ($rootScope, $timeout, $http, filterFilter) {
 	});
 	
 	$rootScope.convertToDate = function (stringDate){
-		if(stringDate==null){
+		if(stringDate==null || stringDate=="" || stringDate=="0000-00-00"){
 			return "";
 		}
+		
 		var dateOut = new Date(stringDate);
 		//alert(dateOut);
 		return dateOut;

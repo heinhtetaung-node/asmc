@@ -65,15 +65,15 @@ function confirmDelete() {
 					<thead>
 					<tr>
 						<th>No.</th>
-						<th ng-click="sortField = 'customer_name'; reverse = !reverse"><a href="">Name</th>
-						<th ng-click="sortField = 'customer_username'; reverse = !reverse"><a href="">Username</th>
-						<th ng-click="sortField = 'customer_email'; reverse = !reverse"><a href="">Email</th>
-						<th ng-click="sortField = 'customer_nric'; reverse = !reverse"><a href="">NRIC</th>
-						<th ng-click="sortField = 'customer_mobile'; reverse = !reverse"><a href="">Mobile</th>
-						<th ng-click="sortField = 'customer_addr'; reverse = !reverse"><a href="">Address</th>
-						<th ng-click="sortField = 'customer_dob'; reverse = !reverse"><a href="">D.O.B</th>
-						<th ng-click="sortField = 'customer_login_date'; reverse = !reverse"><a href="">Last Login</th>
-						<th ng-click="sortField = 'customer_created_date'; reverse = !reverse"><a href="">Created Date</th>
+						<th ng-click="sortField = 'customer_name'; reverse = !reverse"><a href="">Name</a></th>
+						<th ng-click="sortField = 'customer_username'; reverse = !reverse"><a href="">Username</a></th>
+						<th ng-click="sortField = 'customer_email'; reverse = !reverse"><a href="">Email</a></th>
+						<th ng-click="sortField = 'customer_nric'; reverse = !reverse"><a href="">NRIC</a></th>
+						<th ng-click="sortField = 'customer_mobile'; reverse = !reverse"><a href="">Mobile</a></th>
+						<th ng-click="sortField = 'customer_addr'; reverse = !reverse"><a href="">Address</a></th>
+						<th ng-click="sortField = 'customer_dob'; reverse = !reverse"><a href="">D.O.B</a></th>
+						<th ng-click="sortField = 'customer_login_date'; reverse = !reverse"><a href="">Last Login</a></th>
+						<th ng-click="sortField = 'customer_created_date'; reverse = !reverse"><a href="">Created Date</a></th>
 						<th>Action</th>
 					</tr>
 					</thead>
@@ -123,8 +123,8 @@ function confirmDelete() {
 							<td>{{ convertToDate(datas.customer_login_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>{{ convertToDate(datas.customer_created_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>
-								<a href="<?php echo base_url(); ?>asmc/admin/editCustomer/?id={{datas.customer_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>asmc/admin/deleteCustomer/?id={{datas.customer_id}}" onclick="return confirmDelete();">Delete</a>
+								<a href="<?php echo base_url(); ?>admin/editCustomer/?id={{datas.customer_id}}">Edit</a> | 
+								<a href="<?php echo base_url(); ?>admin/deleteCustomer/?id={{datas.customer_id}}" onclick="return confirmDelete();">Delete</a>
 							</td>
 						</tr>
 					</tbody>
