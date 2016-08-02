@@ -1,8 +1,94 @@
-listApp.controller('mainController', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes) {
+listApp.controller('invoiceListViewctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
+	$rootScope.sortField="inv_no";
+	$rootScope.reverse=false;
 	
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
 	
 });
+
+listApp.controller('formlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
+	
+	$rootScope.sortField="f_id";
+	$rootScope.reverse=false;
+	
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+});
+
+listApp.controller('adminlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
+	
+	$rootScope.sortField="admin_id";
+	$rootScope.reverse=false;
+	$scope.igcol=5;
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+});
+
+listApp.controller('agentlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
+	
+	$rootScope.sortField="agent_id";
+	$rootScope.reverse=false;
+	
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+});
+
+listApp.controller('customerlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
+	
+	$rootScope.sortField="customer_id";
+	$rootScope.reverse=false;
+	
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+});
+
+listApp.controller('directorlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
+	
+	$rootScope.sortField="dr_id";
+	$rootScope.reverse=false;
+	
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+});
+
+listApp.controller('managerlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
+	
+	$rootScope.sortField="m_id";
+	$rootScope.reverse=false;
+	
+	$scope.$watch('search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+});
+
+
+
+
+
+
+
+
 
 
 listApp.controller('homecontroller', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {

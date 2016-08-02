@@ -39,7 +39,7 @@ class Customer extends CI_Controller {
 		
 		$data['active'] = 'customer';
 		
-		$per_page = 20;
+		$per_page = 10000;
 		$data['per_page'] = $per_page;
 		
 		$limit = $per_page;

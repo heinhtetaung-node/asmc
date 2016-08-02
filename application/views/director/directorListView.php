@@ -11,7 +11,7 @@ function confirmDelete() {
 }
 </script>
 
-<div id="main-content"> 
+<div id="main-content" ng-controller="directorlistctrl"> 
 	<div class="page-content">
    
 		<!-- title -->
@@ -103,11 +103,11 @@ function confirmDelete() {
 							<td>{{ datas.dr_name }}</td>
 							<td>{{ datas.dr_email }}</td>
 							<td>{{ datas.dr_code }}</td>
-							<td>{{ datas.dr_login_date }}</td>
-							<td>{{ datas.dr_created_date }}</td>
+							<td>{{ convertToDate(datas.dr_login_date) | date:'dd-MMM-yyyy h:mma' }}</td>
+							<td>{{ convertToDate(datas.dr_created_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>
-								<a href="<?php echo base_url(); ?>asmc/admin/editDirector/?id={{datas.dr_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>asmc/admin/deleteDirector/?id={{datas.dr_id}}" onclick="return confirmDelete();">Delete</a>
+								<a href="<?php echo base_url(); ?>admin/editDirector/?id={{datas.dr_id}}">Edit</a> | 
+								<a href="<?php echo base_url(); ?>admin/deleteDirector/?id={{datas.dr_id}}" onclick="return confirmDelete();">Delete</a>
 							</td>
 						</tr>
 					</tbody>

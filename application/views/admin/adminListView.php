@@ -11,7 +11,7 @@ function confirmDelete() {
 }
 </script>
 
-<div id="main-content" ng-controller="mainController"> 
+<div id="main-content" ng-controller="adminlistctrl"> 
 	<div class="page-content">
    
 		<!-- title -->
@@ -56,8 +56,9 @@ function confirmDelete() {
 					</select>
               		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
+				<?php $data['igcol']="0,5"; $data['pdfpage']="A4"; $this->load->view('common/exporttable', $data); ?>
               	<br/>
-             	<table class="table table-bordered">
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
 						<th>No.</th>
@@ -98,11 +99,11 @@ function confirmDelete() {
 							<td>{{ $index+1 }}</td>
 							<td>{{ datas.admin_name }}</td>
 							<td>{{ datas.admin_email }}</td>
-							<td>{{ datas.admin_login_date }}</td>
-							<td>{{ datas.admin_created_date }}</td>
+							<td>{{ convertToDate(datas.admin_login_date) | date:'dd-MMM-yyyy h:mma' }}</td>
+							<td>{{ convertToDate(datas.admin_created_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>
-								<a href="<?php echo base_url(); ?>asmc/admin/editAdmin/?id={{datas.admin_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>asmc/admin/deleteAdmin/?id={{datas.admin_id}}" onclick="return confirmDelete();">Delete</a>
+								<a href="<?php echo base_url(); ?>admin/editAdmin/?id={{datas.admin_id}}">Edit</a> | 
+								<a href="<?php echo base_url(); ?>admin/deleteAdmin/?id={{datas.admin_id}}" onclick="return confirmDelete();">Delete</a>
 							</td>
 						</tr>
 						

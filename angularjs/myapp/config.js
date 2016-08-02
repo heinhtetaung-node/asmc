@@ -72,21 +72,19 @@ listApp.run(function ($rootScope, $timeout, $http, filterFilter) {
 		$rootScope.totalItems = $rootScope.pagedItems.length;		
 	}
 	
-	$rootScope.$watch('search', function(term) {
-		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
-		$rootScope.filteredItems = $rootScope.filtered.length;
-	});
+	
 	
 	$rootScope.convertToDate = function (stringDate){
-		if(stringDate==null){
+		if(stringDate==null || stringDate=="" || stringDate=="0000-00-00"){
 			return "";
 		}
+		
 		var dateOut = new Date(stringDate);
 		//alert(dateOut);
 		return dateOut;
 	};
 	
-	$rootScope.reverse=true;
+	
 	
 });
 
