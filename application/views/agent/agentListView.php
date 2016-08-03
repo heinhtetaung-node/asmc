@@ -60,8 +60,9 @@ function confirmDelete() {
 					</select>
               		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
+				<?php $data['igcol']="0,7"; $data['pdfpage']="A4"; $this->load->view('common/exporttable', $data); ?>
               	<br/>
-             	<table class="table table-bordered">
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
 						<th>No.</th>
@@ -114,8 +115,8 @@ function confirmDelete() {
 							<td>{{ convertToDate(datas.agent_login_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>{{ convertToDate(datas.agent_created_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>
-								<a href="<?php echo base_url(); ?>admin/editAgent/?id={{datas.agent_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>admin/deleteAgent/?id={{datas.agent_id}}" onclick="return confirmDelete();">Delete</a>
+								<a href="<?php echo base_url(); ?>agent/editAgent/?id={{datas.agent_id}}">Edit</a> | 
+								<a href="<?php echo base_url(); ?>agent/deleteAgent/?id={{datas.agent_id}}" onclick="return confirmDelete();">Delete</a>
 							</td>
 						</tr>
 					</tbody>

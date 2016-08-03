@@ -6,12 +6,13 @@
 					ignoreColumn: [],
 					tableName:'yourTableName',
 					type:'csv',
-					pdfFontSize:14,
+					pdfFontSize:7,
 					pdfLeftMargin:10,
 					escape:'true',
 					htmlContent:'false',
 					consoleLog:'false',
-					pdfpage:'A4'
+					pdfpage:'A4',
+					pdfspace:30
 			};
 			
 			var options = $.extend(defaults, options);
@@ -269,7 +270,7 @@
 			}else if(defaults.type == 'pdf'){
 
 				var doc = new jsPDF('p','px', defaults.pdfpage, true);
-				doc.setFontSize(7);
+				doc.setFontSize(defaults.pdfFontSize);
 				
 				// Header
 				var startColPosition=defaults.pdfLeftMargin;
@@ -278,7 +279,7 @@
 					$(this).filter(':visible').find('th').each(function(index,data) {
 						if ($(this).css('display') != 'none'){
 							if(defaults.ignoreColumn.indexOf(index) == -1){
-								var colPosition = startColPosition+ (i * 35);	
+								var colPosition = startColPosition+ (i * defaults.pdfspace);	
 								doc.text(colPosition,5, parseString($(this)));
 								i++;
 							}
@@ -304,7 +305,7 @@
 							if(defaults.ignoreColumn.indexOf(index) == -1){
 								
 								var startColPosition=defaults.pdfLeftMargin;
-								var colPosition = startColPosition+ (i * 35);									
+								var colPosition = startColPosition+ (i * defaults.pdfspace);									
 								doc.text(colPosition,rowPosition, parseString($(this)));
 								i++;
 							}

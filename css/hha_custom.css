@@ -1,6 +1,10 @@
 .table-email tr.unread td {
 	margin-bottom: 10px
 }
+.sel_entryLimit{
+	height: 37px;
+	width: 60px
+}
 .exportablediv{
 	margin-bottom: 10px
 }

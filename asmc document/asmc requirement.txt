@@ -155,3 +155,14 @@ Cayden answer
   Question: can you please explain how to add commission data and where is this data taken?
  - commission payout date wrong * this part i’ll give u all the calculation for commission. they are actually based on percentage
   Question: please provide what's wrong and how to do?
+  
+  
+
+**** Little change the logic according to this requirement ****
+----	after submit allow 3 days to edit, list the form submitted in another page accessible within 3 days. 	-----
+1. add new page "signup form edit page" ->view/form/editSignup.php
+2. In view record list 
+	-	add new button 'Enable' viceverse 'Disable' 
+	-	change 'Edit' button to 'Add Invoice'
+	-	add Edit button link to new page "signup form edit page"
+	-	View Records link in side bar enable to manager, director, agent if they have signup form within 3 day but they can only do "Edit"

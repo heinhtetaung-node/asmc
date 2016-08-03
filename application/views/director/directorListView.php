@@ -60,8 +60,9 @@ function confirmDelete() {
 					</select>
               		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
+				<?php $data['igcol']="0,6"; $data['pdfpage']="A4"; $this->load->view('common/exporttable', $data); ?>
               	<br/>
-             	<table class="table table-bordered">
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
 						<th>No.</th>

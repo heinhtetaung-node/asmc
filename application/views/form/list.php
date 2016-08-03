@@ -61,10 +61,12 @@ function confirmDelete() {
 					</select>
               		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
-             
+				<?php 
+				$data['igcol']="7"; $data['pdfpage']="A4"; 
+				$this->load->view('common/exporttable', $data); ?>
               	<br/>
 
-             	<table class="table table-bordered">
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
 						<th ng-click="sortField = 'booking_ref_no'; reverse = !reverse"><a href="">Booking Ref No.</th>
@@ -121,8 +123,14 @@ function confirmDelete() {
 							<td>{{ datas.funding_amt | currency }}</td>
 							<td><span class="label {{(datas.inv_status == 0)? 'label-warning' : 'label-success'}}">{{ (datas.inv_status == 0) ? 'Pending' : 'Approved' }}</span></td>
 							<td>
-								<a href="<?php echo base_url(); ?>invoice/addFromForm/?id={{datas.f_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>form/deleteRecord/?id={{datas.f_id}}" onclick="return confirmDelete();">Delete</a>
+								<!-- new code by Hein Htet Aung August 3 -->
+								<span ng-show="datas.inv_status == 0"><a href="<?php echo base_url(); ?>form/editRecord/?id={{datas.f_id}}"><button class="button btn-default btn-xs">Edit</button></a></span>
+								<!--<a href="<?php //echo base_url(); ?>invoice/addFromForm/?id={{datas.f_id}}">Edit</a> | -->
+								
+								<?php if ($this->session->userdata('user_type') == 'admin'): ?>
+								<a href="<?php echo base_url(); ?>invoice/addFromForm/?id={{datas.f_id}}"><button class="button btn-primary btn-xs">Add Fund</button></a> <!-- change Edit to Add Fund -->
+								<a href="<?php echo base_url(); ?>form/deleteRecord/?id={{datas.f_id}}" onclick="return confirmDelete();"><button class="button btn-danger btn-xs">Delete</button></a>
+								<?php endif; ?>
 							</td>
 						</tr>
 					

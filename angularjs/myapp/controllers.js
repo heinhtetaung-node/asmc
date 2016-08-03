@@ -1,7 +1,7 @@
 listApp.controller('invoiceListViewctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="inv_no";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
@@ -13,7 +13,7 @@ listApp.controller('invoiceListViewctrl', function ($scope, $controller, $http, 
 listApp.controller('formlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="f_id";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
@@ -25,7 +25,7 @@ listApp.controller('formlistctrl', function ($scope, $controller, $http, filterF
 listApp.controller('adminlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="admin_id";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	$scope.igcol=5;
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
@@ -37,7 +37,7 @@ listApp.controller('adminlistctrl', function ($scope, $controller, $http, filter
 listApp.controller('agentlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="agent_id";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
@@ -49,7 +49,7 @@ listApp.controller('agentlistctrl', function ($scope, $controller, $http, filter
 listApp.controller('customerlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="customer_id";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
@@ -61,7 +61,7 @@ listApp.controller('customerlistctrl', function ($scope, $controller, $http, fil
 listApp.controller('directorlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="dr_id";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);
@@ -73,7 +73,7 @@ listApp.controller('directorlistctrl', function ($scope, $controller, $http, fil
 listApp.controller('managerlistctrl', function ($scope, $controller, $http, filterFilter, restfunctions, Scopes, $rootScope) {		
 	
 	$rootScope.sortField="m_id";
-	$rootScope.reverse=false;
+	$rootScope.reverse=true;
 	
 	$scope.$watch('search', function(term) {
 		$rootScope.filtered = filterFilter($rootScope.pagedItems, term);

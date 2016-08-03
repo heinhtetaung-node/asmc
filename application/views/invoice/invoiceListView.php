@@ -57,7 +57,7 @@ function confirmDelete() {
 				</select>
 				<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
 			</form>
-              <?php 
+			  <?php 
               if ($this->session->userdata('user_type') == 'customer') {?>
 				<!--- !important later implement -->
               	 <!--<form method="get" action="<?php //echo base_url();?>customerinv">
@@ -71,9 +71,14 @@ function confirmDelete() {
               		<input type="submit" class="btn btn-primary" value="Search" name="submit"/>
               	</form>-->
               <?php } ?>
+			  
+				<?php 
+				$data['igcol']="9"; $data['pdfpage']="A4"; $data['pdfFontSize']="4"; $data['pdfspace']="20";
+				$this->load->view('common/exporttable', $data); 
+				?>
               	<br/>
 
-             	<table class="table table-bordered">
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
 						<th ng-click="sortField = 'inv_no'; reverse = !reverse"><a href="">Contract No.</a></th>
@@ -81,7 +86,7 @@ function confirmDelete() {
 						<th ng-click="sortField = 'inv_total'; reverse = !reverse"><a href="">Funding Amt</a></th>
 						<th ng-click="sortField = 'payout.min'; reverse = !reverse"><a href="">Start Payout</a></th>
 						<th ng-click="sortField = 'payout.max'; reverse = !reverse"><a href="">End Payout</a></th>
-						<th ng-click="sortField = 'customer_name'; reverse = !reverse"><a href="">Customer</a></th>
+						<th ng-click="sortField = 'customer_name'; reverse = !reverse"><a href="">Funder</a></th>
 						<th ng-click="sortField = 'm_name'; reverse = !reverse"><a href="">Manager</a></th>
 						<th ng-click="sortField = 'agent_name'; reverse = !reverse"><a href="">Agent</a></th>
 						<th ng-click="sortField = 'inv_created_date'; reverse = !reverse"><a href="">Created Date</a></th>

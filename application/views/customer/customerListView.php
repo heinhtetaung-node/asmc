@@ -60,8 +60,11 @@ function confirmDelete() {
 					</select>
               		<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
               	</form>
+				<?php 
+				$data['igcol']="0,10"; $data['pdfpage']="A4"; $data['pdfFontSize']="4"; $data['pdfspace']="20";
+				$this->load->view('common/exporttable', $data); ?>
               	<br/>
-             	<table class="table table-bordered">
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
 						<th>No.</th>
@@ -123,8 +126,8 @@ function confirmDelete() {
 							<td>{{ convertToDate(datas.customer_login_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>{{ convertToDate(datas.customer_created_date) | date:'dd-MMM-yyyy h:mma' }}</td>
 							<td>
-								<a href="<?php echo base_url(); ?>admin/editCustomer/?id={{datas.customer_id}}">Edit</a> | 
-								<a href="<?php echo base_url(); ?>admin/deleteCustomer/?id={{datas.customer_id}}" onclick="return confirmDelete();">Delete</a>
+								<a href="<?php echo base_url(); ?>customer/editCustomer/?id={{datas.customer_id}}">Edit</a> | 
+								<a href="<?php echo base_url(); ?>customer/deleteCustomer/?id={{datas.customer_id}}" onclick="return confirmDelete();">Delete</a>
 							</td>
 						</tr>
 					</tbody>
