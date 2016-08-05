@@ -116,7 +116,7 @@ function confirmDelete() {
 					?>
 						<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:search | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index">
 							<td>{{ datas.booking_ref_no }}</td>
-							<td>{{ convertToDate(datas.form_date) | date:'dd-MMM-yyyy h:mma' }}</td>
+							<td class="datetd">{{ convertToDate(datas.form_date) | date:'dd-MMM-yyyy' }}</td>
 							<td>{{ datas.name }}</td>
 							<td>{{ datas.nric }}</td>
 							<td>{{ datas.mobile }}</td>

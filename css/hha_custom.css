@@ -8,3 +8,6 @@
 .exportablediv{
 	margin-bottom: 10px
 }
+.datetd{
+	min-width: 100px;
+}

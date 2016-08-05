@@ -122,9 +122,9 @@ function confirmDelete() {
 							<td>{{ datas.customer_nric }}</td>
 							<td>{{ datas.customer_mobile }}</td>
 							<td>{{ datas.customer_addr }}</td>
-							<td>{{ convertToDate(datas.customer_dob) | date:'dd-MMM-yyyy h:mma' }}</td>
-							<td>{{ convertToDate(datas.customer_login_date) | date:'dd-MMM-yyyy h:mma' }}</td>
-							<td>{{ convertToDate(datas.customer_created_date) | date:'dd-MMM-yyyy h:mma' }}</td>
+							<td class="datetd">{{ convertToDate(datas.customer_dob) | date:'dd-MMM-yyyy' }}</td>
+							<td class="datetd">{{ convertToDate(datas.customer_login_date) | date:'dd-MMM-yyyy' }}</td>
+							<td class="datetd">{{ convertToDate(datas.customer_created_date) | date:'dd-MMM-yyyy' }}</td>
 							<td>
 								<a href="<?php echo base_url(); ?>customer/editCustomer/?id={{datas.customer_id}}">Edit</a> | 
 								<a href="<?php echo base_url(); ?>customer/deleteCustomer/?id={{datas.customer_id}}" onclick="return confirmDelete();">Delete</a>

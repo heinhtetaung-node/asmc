@@ -128,14 +128,14 @@ function confirmDelete() {
 					
 					<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:search | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index">
 						<td>{{ datas.inv_no }}</td>
-						<td>{{ datas.inv_date | date:'dd-MMM-yyyy' }}</td>
+						<td class="datetd">{{ datas.inv_date | date:'dd-MMM-yyyy' }}</td>
 						<td>{{ datas.inv_total | currency }}</td>
-						<td>{{ convertToDate(datas.payout.min) | date:'dd-MMM-yyyy' }}</td>
-						<td>{{ convertToDate(datas.payout.max) | date:'dd-MMM-yyyy' }}</td>
+						<td class="datetd">{{ convertToDate(datas.payout.min) | date:'dd-MMM-yyyy' }}</td>
+						<td class="datetd">{{ convertToDate(datas.payout.max) | date:'dd-MMM-yyyy' }}</td>
 						<td>{{ datas.customer_name }}</td>
 						<td>{{ datas.m_name }}</td>
 						<td>{{ datas.agent_name }}</td>
-						<td>{{ convertToDate(datas.inv_created_date) | date:'dd-MMM-yyyy' }}</td>
+						<td class="datetd">{{ convertToDate(datas.inv_created_date) | date:'dd-MMM-yyyy' }}</td>
 						<td>
 							<a href="<?php echo base_url(); ?>invoice/viewInvoice/?inv={{datas.inv_id}}">View</a> | 
 							<a href="<?php echo base_url(); ?>invoice/editInvoice/?inv={{datas.inv_id}}">Edit</a> | 
