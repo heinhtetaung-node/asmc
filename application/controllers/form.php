@@ -39,6 +39,10 @@ class Form extends CI_Controller {
 		$this->load->model('Agent_model');
 	}
 	
+	public function getallcustomers(){
+		echo json_encode($this->Customer_model->getAllCustomer());
+	}
+	
 	public function index()
 	{	
 		$data['title'] = WEB_TITLE;
@@ -47,6 +51,8 @@ class Form extends CI_Controller {
 		$data['managers'] = $this->Manager_model->getAllManager();
 		$data['directors'] = $this->Director_model->getAllDirector();
 		$data['agents'] = $this->Agent_model->getAllAgent();
+		$data['funders'] = $this->Customer_model->getAllCustomer();
+		
 		$data['countries'] = $this->Form_model->getCountry();
 		
 		if (isset($_POST['submit'])) {
@@ -57,6 +63,13 @@ class Form extends CI_Controller {
 				$cu_id = $existing_cus->{'customer_id'};
 			}
 			else {
+				// echo "condition1";
+				// echo "<pre>";
+				// var_dump($_POST);
+				// echo "</pre>";
+				
+				// exit;
+			
 				//add customer
 				$c['customer_name'] = $_POST['name'];
 				$c['customer_username'] = strtolower(trim($_POST['name']));
@@ -89,11 +102,6 @@ class Form extends CI_Controller {
 			else if ($this->session->userdata('user_type') == 'director')
 				$_POST['creator_id'] = $this->session->userdata('director')->{'dr_id'};
 			
-			//echo "<pre>";
-			//var_dump($_POST);
-			//echo "</pre>";
-			
-			//exit;
 			
 			// Date change to valid Edit by Hein Htet Aung August 3 
 			if($_POST['dob']!=""){
@@ -111,6 +119,14 @@ class Form extends CI_Controller {
 			if($_POST['form_date']!=""){
 				$_POST['form_date'] = substr($_POST['form_date'],6,4)."-".substr($_POST['form_date'],3,2)."-".substr($_POST['form_date'],0,2);
 			}
+			
+			// echo "condition2";
+			// echo "<pre>";
+			// var_dump($_POST);
+			// echo "</pre>";
+			
+			// exit;
+			
 			
 			
 			$this->Form_model->addForm($_POST);
@@ -232,7 +248,10 @@ class Form extends CI_Controller {
 				$this->session->set_userdata('success', 'Form updated');
 			
 			}
-			
+			$this->load->model("Condition_model");
+			if($this->session->userdata('user_type')=="admin"){		// New code added by Hein Htet Aung August 06, 2016 to check admin edit permission by cretor.
+				$data['permissionrecord']=$this->Condition_model->checkenable_after3day($_GET['id']);
+			}
 			$this->load->view('form/editForm', $data);
 		}
 	}
@@ -294,7 +313,14 @@ class Form extends CI_Controller {
 		$this->load->view('form/list', $data);
 	}
 	
-
+	public function update_editpermission(){ // New code added by Hein Htet Aung August 06, 2016 to check admin edit permission by cretor.
+		$data = json_decode(file_get_contents("php://input"));     
+		
+		$this->load->model('Condition_model');
+		$res=$this->Condition_model->update_editpermission($data->f_id, $data->edit_permission);
+		
+		echo json_encode($res);
+	}
 }
 
 /* End of file welcome.php */

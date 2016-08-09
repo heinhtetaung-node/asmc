@@ -1,5 +1,5 @@
 <?php 
-$this->load->view('header');
+$this->load->view('header_signup');
 // $this->load->view('navbar');
 // $this->load->view('sidebar');
 ?>
@@ -65,7 +65,7 @@ form label {
     color: #000000;
 }
 </style>
-<div class="container">
+<div class="container" ng-controller="MyCtrl">
 <div class="row">
 	<div class="large-12 columns main-content-top">
 	  <!-- Row -->
@@ -107,43 +107,48 @@ form label {
 				} 
 				?>
 				<tr>
+					<td colspan="2" ><label>NRIC/Passport:</label></td>
+					<td class="autoinputtd">
+						<input type="text" style="display:none;" name="nric" ng-model="customer_nric">
+						<input type="hidden" ng-init="getfunders(<?php echo htmlspecialchars(json_encode($funders,JSON_NUMERIC_CHECK)); ?>)" >
+						<autocomplete ng-model="customer_nric" attr-placeholder="type to search funder..." click-activation="true" data="movies" on-type="doSomething" on-select="doSomethingElse"></autocomplete>
+						
+					</td>
+					<td ><label>Date of Birth:</label></td>
+					<td colspan="2" ><input type="text" ng-model="customer_dob" id="dob_id" class="datepicker" name="dob"></td>
+				</tr>
+				
+				<tr>
 					<td colspan="2" ><label>Name of Funder:</label></td>
-					<td colspan="4"><input type="text" name="name"></td>
+					<td colspan="4"><input type="text" ng-model="filtercustomer.customer_name" name="name"></td>
 				</tr>
 				<tr>
-					<td colspan="2" ><label>NRIC/Passport:</label></td>
-					<td><input type="text" name="nric"></td>
-					<td ><label>Date of Birth:</label></td>
-					<td colspan="2" ><input type="text" class="datepicker" name="dob"></td>
+					<td colspan="2" ><label>Bank Account No.:</label></td>
+					<td><input type="text" ng-model="filtercustomer.customer_bank_acc" name="bank_acc_no"></td>
+					<td ><label>Mobile No.:</label></td>
+					<td colspan="2" ><input type="text" ng-model="filtercustomer.customer_mobile" name="mobile"></td>
+				</tr>
+				<tr>
+					<td colspan="2" ><label>Name In Bank Account:</label></td>
+					<td><input type="text" name="bank_acc_name" ng-model="filtercustomer.customer_bank_name" ></td>
+					<td ><label>Email Address:</label></td>
+					<td colspan="2" ><input type="email" ng-model="filtercustomer.customer_email" name="email"></td>
+				</tr>
+				<tr>
+					<td colspan="2" ><label>Correspondence Address:</label></td>
+					<td class="autoinputtd"><textarea class="txtarea" ng-model="filtercustomer.customer_addr" name="address"></textarea></td>					
 				</tr>
 				<tr>
 					<td colspan="2" ><label>Nationality:</label></td>
 					<td><input type="text" name="nationality"></td>
-					<td ><label>Mobile No.:</label></td>
-					<td colspan="2" ><input type="text" name="mobile"></td>
-				</tr>
-				<tr>
-					<td colspan="2" ><label>Telephone No.(H):</label></td>
-					<td><input type="tel" name="tel"></td>
-					<td ><label>Office No.:</label></td>
-					<td colspan="2" ><input type="text" name="office_no"></td>
-				</tr>
-				<tr>
-					<td colspan="2" ><label>Bank Account No.:</label></td>
-					<td><input type="text" name="bank_acc_no"></td>
 					<td ><label>Bank Type:</label></td>
 					<td colspan="2" ><input type="text" class="form-control" name="bank_type"></td>
 				</tr>
 				<tr>
-					<td colspan="2" ><label>Name In Bank Account:</label></td>
-					<td><input type="text" name="bank_acc_name"></td>
-					<td ><label>Email Address:</label></td>
-					<td colspan="2" ><input type="email" name="email"></td>
-				</tr>
-				<tr>
-					<td colspan="2" ><label>Correspondence Address:</label></td>
-					<td colspan="4"><input type="text" name="address"></td>
-					
+					<td colspan="2" ><label>Telephone No.(H):</label></td>
+					<td><input type="tel" ng-model="filtercustomer.customer_home_no" name="tel"></td>
+					<td ><label>Office No.:</label></td>
+					<td colspan="2" ><input type="text" name="office_no"></td>
 				</tr>
 				<tr>
 					<td colspan="2" ><label>Country:</label></td>

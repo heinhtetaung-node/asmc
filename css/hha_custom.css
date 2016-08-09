@@ -11,3 +11,9 @@
 .datetd{
 	min-width: 100px;
 }
+.txtarea{
+    width: 100%;
+    height: 60px
+}
+.toggle.android { border-radius: 0px;}
+.toggle.android .toggle-handle { border-radius: 0px; }

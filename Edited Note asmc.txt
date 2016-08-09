@@ -15,5 +15,34 @@ In forms table
 
 Needed Unexpectly
 1. check form_date insert in sign up forms page
+--------------------------------------------------------
+
+Phase 2 Changes
+view->forms->editForm.php
+view->header.php
+css->hha_custom.css
+css->bootstrap-toogle.min.css
+angularjs->boostrap-toogle.min.js
+angularjs->myapp->controller.js
+model->condition_model.php
+controller->form.php
+angularjs->autocomplete folder
+views->header_signup.php
+views->agentListView.php
+controller->agent.php
+model->agent_model.php
+view->agnent->editAgentView
+view->invoice->invoiceListVIew
+
+Database field changes
+1. In forms talble new field edit_permission default 0. tiny int 0,1 add 0 is not allow and 1 is allow
 
 
+
+Logic of after 3 days, only admin can enable the form to be edited by them again
+- add new field edit_permission (0 is not allow,1 allow)
+- is In 3 days, admin cannot see the Edit permission enable button
+- is In 3 days director, manager can edit even edit_permission = 0
+
+- more than 3 days, admin can see the edit permission enable button and they can control
+- more than 3 days, director, manager can edit when edit_permission = 1

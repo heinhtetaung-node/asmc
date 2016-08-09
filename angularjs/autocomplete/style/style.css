@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.autocomplete ul {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow:scroll;
+	max-height:350px;
+}
+.autoinputtd{
+	padding-right: 10px
+}

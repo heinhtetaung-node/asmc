@@ -46,10 +46,6 @@ function confirmDelete() {
 			  
 			  <form method="get" action="<?php echo base_url();?>invoice">
 				Search: <input type="text" name="search" ng-model="search" ng-change="filter()" placeholder="Filter" />
-				<select ng-model="agent_search">
-					<option value="">All Agents</option>
-					<option>B B Tan</option>
-				</select>
 				<select ng-model="entryLimit" class="sel_entryLimit">
 					<option ng-selected="true">20</option>
 					<option>30</option>
@@ -59,6 +55,15 @@ function confirmDelete() {
 					<option>300</option>
 					<option>500</option>
 				</select>
+				<input type="hidden" ng-init="user_type=<?php echo htmlspecialchars(json_encode($this->session->userdata('user_type'),JSON_NUMERIC_CHECK)); ?>">
+				<?php 
+				//if($this->session->userdata("user_type")=="manager"){ ?>
+					<select ng-model="agent_search">
+						<option ng-selected="true" value="">All Agent</option>
+						<option ng-repeat="agent in datas" >{{agent.agent_name}}</option>
+					</select>
+				<?php
+				//} ?>
 				<!--<input type="submit" class="btn btn-primary" value="Search" name="submit"/>-->
 			</form>
 			  <?php 
@@ -81,7 +86,7 @@ function confirmDelete() {
 				$this->load->view('common/exporttable', $data); 
 				?>
               	<br/>
-
+				
              	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
@@ -133,8 +138,16 @@ function confirmDelete() {
 						// }
 					// }
 					?>
+					<?php 
+					//if($this->session->userdata('user_type')!="manager"){ ?>
+						
+						<!--<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:search | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index">--><?php 
 					
-					<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:{inv_no:search, agent_name:agent_search} | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index">
+					//}else if($this->session->userdata('user_type')=="manager"){ ?>
+						
+						<tr id="{{datas.dr_id}}" tr-id="{{datas.dr_id}}" ng-repeat="datas in filtered = (datas | filter:{ inv_no: search, inv_date: search, inv_total: search, customer_name: search, agent_name: agent_search } | orderBy : sortField :reverse |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit) track by $index"><?php 
+					
+					//} ?>
 						<td>{{ datas.inv_no }}</td>
 						<td class="datetd">{{ datas.inv_date | date:'dd-MMM-yyyy' }}</td>
 						<td>{{ datas.inv_total | currency }}</td>
