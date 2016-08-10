@@ -33,6 +33,15 @@ controller->agent.php
 model->agent_model.php
 view->agnent->editAgentView
 view->invoice->invoiceListVIew
+angularjs->angular-filter.min.js
+view->invoice->addInvoiceView.php
+model->invoice_model.php
+view->commission->commissionListView.php
+
+
+Database data changes
+manager used in db {m_id:8, name: Martin Yeo, email: martin@blackmineral.com.sg, pass: 81dc9bdb52d04dc20036dbd8313ed055}
+agent used in db {agent_id:10, name: Charlootte Ho, email: charlootteho@blackmineral.com.sg, pass: 559ea42ad36d832c72f8c61734d3fdc8}
 
 Database field changes
 1. In forms talble new field edit_permission default 0. tiny int 0,1 add 0 is not allow and 1 is allow

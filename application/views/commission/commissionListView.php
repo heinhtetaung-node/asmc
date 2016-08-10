@@ -40,15 +40,19 @@ $this->load->view('sidebar');
              <?php
              $total_comm = 0;
              ?>
-             	<table class="table table-bordered">
+				<?php $data['igcol']=""; $data['pdfFontSize']="4"; $data['pdfspace']="20"; $data['pdfpage']="A4"; $this->load->view('common/exporttable', $data); ?>
+				<br>
+             	<table class="table table-bordered" id="ang_table">
 					<thead>
 					<tr>
-						<th>Invoice No.</th>
-						<th>Invoice Date</th>
+						<th>Contract No.</th>
+						<th>Contract Date</th>
 						
 						
-						<th>Customer</th>
-						<th>Agent</th>
+						<th>Funder</th>
+						<?php if($this->session->userdata('user_type')!="agent"){ ?>
+								<th>Agent</th>
+						<?php } ?>
 						<th>Funding Amount</th>
 						<th>Commissions 
 <!-- 						(<?php echo $percent * 100;?>%) -->
@@ -77,14 +81,16 @@ $this->load->view('sidebar');
 							echo '<td>'.$invoices[$i]->{'inv_no'}.'</td>';
 							echo '<td>'.$invoices[$i]->{'inv_date'}.'</td>';
 							echo '<td>'.$invoices[$i]->{'customer_name'}.'</td>';
-							echo '<td>'.$invoices[$i]->{'agent_name'}.'</td>';
-							echo '<td>$'.number_format($invoices[$i]->{'inv_total'}).'</td>';
+							if($this->session->userdata('user_type')!="agent"){
+								echo '<td>'.$invoices[$i]->{'agent_name'}.'</td>';
+							}
+							echo '<td>$'.number_format($invoices[$i]->{'inv_total'},2).'</td>';
 							
 							if ($group == 'manager') {
 								if ($this->Commision_model->checkIsInvoiceTransferred($invoices[$i]->{'inv_id'}, $invoices[$i]->{'m_id'}, 1))
 									echo '<td>-</td>';
 								else {
-									echo '<td>$'.number_format($percent * $invoices[$i]->{'inv_total'}).'</td>';
+									echo '<td>$'.number_format($percent * $invoices[$i]->{'inv_total'},2).'</td>';
 									$total_comm += $percent * $invoices[$i]->{'inv_total'};	
 								}
 							
@@ -93,19 +99,19 @@ $this->load->view('sidebar');
 								if ($this->Commision_model->checkIsInvoiceTransferred($invoices[$i]->{'inv_id'}, $invoices[$i]->{'agent_id'}, 1))
 									echo '<td>-</td>';
 								else {
-									echo '<td>$'.number_format($percent * $invoices[$i]->{'inv_total'}).'</td>';
+									echo '<td>$'.number_format($percent * $invoices[$i]->{'inv_total'},2).'</td>';
 									$total_comm += $percent * $invoices[$i]->{'inv_total'};	
 								}
 							
 							}
 							
-							echo '<td>'.$invoices[$i]->{'inv_amt'}.'</td>';
+							echo '<td>$'.number_format($invoices[$i]->{'inv_amt'},2).'</td>';
 // 							echo '<td><a href="'.base_url().'commission/viewComm/?inv='.$invoices[$i]->{'inv_id'}.'">View Comm</a></td>';
 							
 							for ($k =0; $k <count($dates); $k++) {
 								if ($group == 'manager') {
 									if (isset($invoices[$i]->{'m_payouts'}[$dates[$k]])) {
-										echo '<td>'.$invoices[$i]->{'m_payouts'}[$dates[$k]].'</td>';
+										echo '<td>$'.number_format($invoices[$i]->{'m_payouts'}[$dates[$k]],2).'</td>';
 										if (isset($total_comm_per_date[$dates[$k]]))
 											$total_comm_per_date[$dates[$k]] += $invoices[$i]->{'m_payouts'}[$dates[$k]];
 										else
@@ -118,7 +124,7 @@ $this->load->view('sidebar');
 								}
 								else if ($group == 'agent') {
 									if (isset($invoices[$i]->{'s_payouts'}[$dates[$k]])) {
-										echo '<td>'.$invoices[$i]->{'s_payouts'}[$dates[$k]].'</td>';
+										echo '<td>$'.number_format($invoices[$i]->{'s_payouts'}[$dates[$k]],2).'</td>';
 										if (isset($total_comm_per_date[$dates[$k]]))
 										$total_comm_per_date[$dates[$k]] += $invoices[$i]->{'s_payouts'}[$dates[$k]];	
 										else
@@ -142,7 +148,7 @@ $this->load->view('sidebar');
 						<?php
 						for ($k =0; $k <count($dates); $k++) {
 							$ttl = isset($total_comm_per_date[$dates[$k]]) ? $total_comm_per_date[$dates[$k]] : 0;
-							echo '<td>'.$ttl.'</td>';
+							echo '<td>$'.number_format($ttl,2).'</td>';
 						}
 						?>
 						

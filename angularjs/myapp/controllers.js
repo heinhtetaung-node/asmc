@@ -4,13 +4,27 @@ listApp.controller('invoiceListViewctrl', function ($scope, $controller, $http, 
 	$rootScope.sortField="inv_no";
 	$rootScope.reverse=true;
 	
+	$scope.manager_search="";
+	$scope.agent_search="";
+	$scope.customer_search="";
+	
 	$scope.$watch('search', function(term) {
-		$rootScope.filtered = filterFilter($rootScope.pagedItems, { inv_no:$scope.search, agent_name:$scope.agent_search});
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, { inv_no:$scope.search, agent_name:$scope.agent_search, m_name:$scope.manager_search, customer_name:$scope.customer_search});
 		$rootScope.filteredItems = $rootScope.filtered.length;
 	});
 	
 	$scope.$watch('agent_search', function(term) {
-		$rootScope.filtered = filterFilter($rootScope.pagedItems, { inv_no:$scope.search, agent_name:$scope.agent_search});
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, { inv_no:$scope.search, agent_name:$scope.agent_search, m_name:$scope.manager_search, customer_name:$scope.customer_search});
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+	$scope.$watch('manager_search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, { inv_no:$scope.search, agent_name:$scope.agent_search, m_name:$scope.manager_search, customer_name:$scope.customer_search});
+		$rootScope.filteredItems = $rootScope.filtered.length;
+	});
+	
+	$scope.$watch('customer_search', function(term) {
+		$rootScope.filtered = filterFilter($rootScope.pagedItems, { inv_no:$scope.search, agent_name:$scope.agent_search, m_name:$scope.manager_search, customer_name:$scope.customer_search});
 		$rootScope.filteredItems = $rootScope.filtered.length;
 	});
 	

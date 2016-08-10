@@ -736,3 +736,11 @@ issue(37)({
 	var str = "Hello world!";
 	var res = str.substring(1, 4);
 });
+
+issue(38)({
+	ng-repeat show with groupBy and using angular-filters
+	
+	<option ng-repeat="(key, value) in datas | groupBy: 'agent_name'">{{key}}</option>
+	
+	https://github.com/a8m/angular-filter#groupby
+})

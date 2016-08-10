@@ -1,5 +1,5 @@
 var baseurl="";
-var listApp = angular.module('myapp', ['ui.bootstrap']);    
+var listApp = angular.module('myapp', ['ui.bootstrap','angular.filter']);    
 
 listApp.filter('rawHtml', ['$sce', function($sce){
 	  return function(val) {
