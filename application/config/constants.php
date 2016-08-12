@@ -69,5 +69,12 @@ define('RECEIPT_PREFIX', 'BM');
 define('EMAIL_SENDER', 'mailer@asmc.com.sg');
 
 
+define('SMTP_HOST', 'cpanel2.sgdatahub.com');
+define('SMTP_PORT', '465'); 
+define('SMTP_CRYPTO', 'tls');
+define('SMTP_USER', 'testmail@sgdatacrm.com');
+define('SMTP_PASS', 'testmail');
+
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

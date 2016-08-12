@@ -37,6 +37,12 @@ angularjs->angular-filter.min.js
 view->invoice->addInvoiceView.php
 model->invoice_model.php
 view->commission->commissionListView.php
+controller->commission
+model->commission_model
+controller->customer
+controller->form
+model->customer_model
+view->customerListView.php
 
 
 Database data changes
@@ -55,3 +61,10 @@ Logic of after 3 days, only admin can enable the form to be edited by them again
 
 - more than 3 days, admin can see the edit permission enable button and they can control
 - more than 3 days, director, manager can edit when edit_permission = 1
+
+
+
+server edit file
+customer
+customer_model
+form

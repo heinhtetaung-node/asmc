@@ -257,7 +257,7 @@ $(document).ready(function() {
 					<td ><label>Document Required:</label></td>
 					<td colspan="2">Funder NRIC/Passport copy</td>
 					<td ><label>Bank Book/Bank Statement:</label></td>
-					<td colspan="2"><input type="text" name="bank_book" placeholder="" value="<?php echo isset($bank_book) ? set_value('bank_book', $booking_ref_no) : set_value('bank_book', '');?>"></td>
+					<td colspan="2"><input type="text" name="bank_book" placeholder="" value="<?php echo isset($bank_book) ? set_value('bank_book', $bank_book) : set_value('bank_book', '');?>"></td>
 				</tr>
 				
 			</table>
