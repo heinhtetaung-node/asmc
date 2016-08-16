@@ -234,7 +234,7 @@ $(document).ready(function() {
 				<tr>
 					<td style="text-align:center" colspan="6" >For Official Use Only:</td>
 				</tr>
-				<tr>
+				<tr style="display:none;">
 					<td colspan="2" ><label>CRM:</label></td>
 					<td><input type="text" name="crm" value="<?php echo isset($crm) ? set_value('crm', $crm) : set_value('crm', '');?>"></td>
 					<td ><label>SM:</label></td>
